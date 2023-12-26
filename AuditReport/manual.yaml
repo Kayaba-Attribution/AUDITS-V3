@@ -1,0 +1,11 @@
+# Comment: Manual audit fields
+---
+token_address: "0x3a5efAEF111Ea4014812181C2dd07ce4887593dE"
+network: 56
+imageName: "aRK.png"
+url: "https://hub.docker.com/_/nginx"
+telegram: "https://t.me/auditreport"
+description: "This token is the best in the market because it is the most secure and the most reliable."
+
+# These will change later
+type: "ERC-20"

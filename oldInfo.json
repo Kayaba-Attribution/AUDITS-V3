@@ -1,0 +1,42 @@
+{
+  "payment": 0,
+  "paymentLink": "https://bscscan.com/tx/",
+  "address": "0x000000000000000000000000000000000000TEST",
+  "name": "TEST",
+  "symbol": "TEST",
+  "owner": "0x000000000000000000000000000000OWNER_TEST",
+  "decimals": "9",
+  "supply": "1,000,000,000,000",
+  "imageName": "ether.png",
+  "Url": "https://test.test",
+  "Telegram": "https://t.me/test",
+  "Codebase": "https://bscscan.com/address/0x000000000000000000000000000000000000TEST#code",
+  "baseToken": "BNB",
+  "Platform": "BSC",
+  "Description": "ERC-20",
+  "type": "Token",
+  "isLive": "Yes",
+  "Language": "Solidity",
+  "compiler": "v0.8.19+commit.7dd6d404",
+  "optimization": "200",
+  "LicenseType": "MIT",
+  "contracts": [],
+  "crs": [
+    ["0x000000000000000000000000000000000000TEST", "0.00", "0.00", "0", "$NaN"],
+    [["0.00", "0"], ["100.00", "1,000,000,000,000"], ["NaN"]],
+    [
+      ["0.00", "0"],
+      ["0.00", "0"],
+      ["0.00", "0"]
+    ],
+    29268943
+  ],
+  "onlyOwnerTable": [
+    ["renounceOwnership", "none", "public"],
+    ["transferOwnership", " address newOwner", "public"],
+    ["claimStuckTokens", " address token", "external"],
+    ["excludeFromFees", " address account, bool excluded", "external"],
+    ["changeMarketingWallet", " address _marketingWallet", "external"],
+    ["enableTrading", "none", "external"]
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "anti_whale_modifiable": "0",
+  "buy_tax": "0.1",
+  "can_take_back_ownership": "0",
+  "cannot_buy": "0",
+  "cannot_sell_all": "0",
+  "creator_address": "0xe4f683bf74a2211be97f9e9ebac623ea95cc1a4b",
+  "creator_balance": "15566142924833.616822472",
+  "creator_percent": "0.037062",
+  "dex": [
+    {
+      "liquidity_type": "UniV2",
+      "name": "PancakeV2",
+      "liquidity": "5344.97679367",
+      "pair": "0x8b29a93605ecc453ed1d0bab744025347765d98b",
+      "token0": "0x3a5efAEF111Ea4014812181C2dd07ce4887593dE",
+      "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "reserve0": 133729547641074.55,
+      "reserve1": 20.210144037787046
+    }
+  ],
+  "external_call": "0",
+  "hidden_owner": "0",
+  "holder_count": "4610",
+  "holders": [
+    {
+      "address": "0x000000000000000000000000000000000000dead",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "255692656832442.975049271",
+      "percent": "0.608792040077245178",
+      "is_locked": 1
+    },
+    {
+      "address": "0x8b29a93605ecc453ed1d0bab744025347765d98b",
+      "tag": "PancakeV2",
+      "is_contract": 1,
+      "balance": "133729547641074.548392645",
+      "percent": "0.318403684859701305",
+      "is_locked": 0
+    },
+    {
+      "address": "0xe4f683bf74a2211be97f9e9ebac623ea95cc1a4b",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "15561709236690.637759806",
+      "percent": "0.037051688658787232",
+      "is_locked": 0
+    },
+    {
+      "address": "0xdba5e8c3818d540437863813089015f59405a970",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "5500569350386.423129811",
+      "percent": "0.013096593691396245",
+      "is_locked": 0
+    },
+    {
+      "address": "0x4531c4fe41eeb40293db97a5115973be3b2c40f8",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "2985216161339.989979644",
+      "percent": "0.007107657526999976",
+      "is_locked": 0
+    },
+    {
+      "address": "0xb24cf9ba9c09a9f495b6b876e7c1b88209cd8a8d",
+      "tag": "",
+      "is_contract": 1,
+      "balance": "1970052366730.850549411",
+      "percent": "0.004690600873168691",
+      "is_locked": 0
+    },
+    {
+      "address": "0xda129631d9ab7e25dd6511ccc72de04e9d1ca9ee",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "884750833320.852552206",
+      "percent": "0.002106549603144887",
+      "is_locked": 0
+    },
+    {
+      "address": "0xd9bd8dbac1e384d1a4906e441c7c60bee61f5e90",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "201059838437.988777878",
+      "percent": "0.000478713901042830",
+      "is_locked": 0
+    },
+    {
+      "address": "0x0331b894502b25931e1ad3e019229f4f65f4813f",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "200881964433.03098577",
+      "percent": "0.000478290391507216",
+      "is_locked": 0
+    },
+    {
+      "address": "0xa2cb2ce8329f27b1fb19d4ed163be7d3c8f50da8",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "133545961995.314400651",
+      "percent": "0.000317966576179320",
+      "is_locked": 0
+    }
+  ],
+  "honeypot_with_same_creator": "0",
+  "is_anti_whale": "0",
+  "is_blacklisted": "0",
+  "is_honeypot": "0",
+  "is_in_dex": "1",
+  "is_mintable": "0",
+  "is_open_source": "1",
+  "is_proxy": "0",
+  "is_whitelisted": "1",
+  "lp_holder_count": "3",
+  "lp_holders": [
+    {
+      "address": "0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe",
+      "tag": "PinkLock02",
+      "value": null,
+      "is_contract": 1,
+      "balance": "1605.623771442756652244",
+      "percent": "0.999999989284540176",
+      "NFT_list": null,
+      "is_locked": 1,
+      "locked_detail": [
+        {
+          "amount": "1605.623771442756652244",
+          "end_time": "2024-12-07T14:00:19+00:00",
+          "opt_time": "2023-06-06T14:00:19+00:00"
+        }
+      ]
+    },
+    {
+      "address": "0x996730db3c8ef2aa6bfbd3fa9c99a8201f97a5db",
+      "tag": "",
+      "value": null,
+      "is_contract": 1,
+      "balance": "0.000017204997197669",
+      "percent": "0.000000010715459822",
+      "NFT_list": null,
+      "is_locked": 0
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "tag": "Null Address",
+      "value": null,
+      "is_contract": 0,
+      "balance": "0.000000000000001",
+      "percent": "0.000000000000000000",
+      "NFT_list": null,
+      "is_locked": 1
+    }
+  ],
+  "lp_total_supply": "1605.623788647753850913",
+  "owner_address": "0x000000000000000000000000000000000000dead",
+  "owner_balance": "255961309746511.605909488",
+  "owner_change_balance": "0",
+  "owner_percent": "0.609432",
+  "personal_slippage_modifiable": "0",
+  "selfdestruct": "0",
+  "sell_tax": "0.084",
+  "slippage_modifiable": "0",
+  "token_name": "SimpsonsINU",
+  "token_symbol": "SIMPSON",
+  "total_supply": "420000000000000",
+  "trading_cooldown": "0",
+  "transfer_pausable": "0",
+  "contract_address": "0x3a5efaef111ea4014812181c2dd07ce4887593de",
+  "token_decimals": 9,
+  "pairCreatedAtTimestamp": "1685723126",
+  "transfer_tax": 0,
+  "buy_gas": "201639",
+  "sell_gas": "125192",
+  "pairCreationTxHash": "0xc045df9004460a765a263c640eb08584c0503e6f981af7a932595a2dfadd796a",
+  "chain": {
+    "id": "56",
+    "name": "Binance Smart Chain",
+    "shortName": "bsc",
+    "currency": "BNB",
+    "decimals": 18
+  },
+  "imageName": "aRK.png",
+  "url": "https://hub.docker.com/_/nginx",
+  "telegram": "https://t.me/auditreport",
+  "description": "This token is the best in the market because it is the most secure and the most reliable.",
+  "type": "ERC-20",
+  "blockScanData": {
+    "ContractName": "SimpsonsINU",
+    "CompilerVersion": "v0.8.16+commit.07a7930e",
+    "OptimizationUsed": "1",
+    "Runs": "200",
+    "ConstructorArguments": "",
+    "EVMVersion": "Default",
+    "Library": "",
+    "LicenseType": "Unlicense",
+    "Proxy": "0",
+    "Implementation": "",
+    "SwarmSource": "ipfs://a49b307062ab062d70e9c9966940813f4f92d62c81ab70c05476d7214e11cf0b"
+  }
+}

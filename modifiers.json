@@ -1,0 +1,604 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "printers": [
+      {
+        "elements": [
+          {
+            "type": "pretty_table",
+            "name": {
+              "content": {
+                "fields_names": [
+                  "Function",
+                  "Modifiers"
+                ],
+                "rows": [
+                  [
+                    "add",
+                    []
+                  ],
+                  [
+                    "sub",
+                    []
+                  ],
+                  [
+                    "sub",
+                    []
+                  ],
+                  [
+                    "mul",
+                    []
+                  ],
+                  [
+                    "div",
+                    []
+                  ],
+                  [
+                    "div",
+                    []
+                  ],
+                  [
+                    "mod",
+                    []
+                  ],
+                  [
+                    "mod",
+                    []
+                  ]
+                ]
+              },
+              "name": "SafeMath"
+            },
+            "source_mapping": {}
+          },
+          {
+            "type": "pretty_table",
+            "name": {
+              "content": {
+                "fields_names": [
+                  "Function",
+                  "Modifiers"
+                ],
+                "rows": [
+                  [
+                    "mul",
+                    []
+                  ],
+                  [
+                    "div",
+                    []
+                  ],
+                  [
+                    "sub",
+                    []
+                  ],
+                  [
+                    "add",
+                    []
+                  ],
+                  [
+                    "abs",
+                    []
+                  ],
+                  [
+                    "toUint256Safe",
+                    []
+                  ],
+                  [
+                    "slitherConstructorConstantVariables",
+                    []
+                  ]
+                ]
+              },
+              "name": "SafeMathInt"
+            },
+            "source_mapping": {}
+          },
+          {
+            "type": "pretty_table",
+            "name": {
+              "content": {
+                "fields_names": [
+                  "Function",
+                  "Modifiers"
+                ],
+                "rows": [
+                  [
+                    "toInt256Safe",
+                    []
+                  ]
+                ]
+              },
+              "name": "SafeMathUint"
+            },
+            "source_mapping": {}
+          },
+          {
+            "type": "pretty_table",
+            "name": {
+              "content": {
+                "fields_names": [
+                  "Function",
+                  "Modifiers"
+                ],
+                "rows": [
+                  [
+                    "feeTo",
+                    []
+                  ],
+                  [
+                    "feeToSetter",
+                    []
+                  ],
+                  [
+                    "getPair",
+                    []
+                  ],
+                  [
+                    "allPairs",
+                    []
+                  ],
+                  [
+                    "allPairsLength",
+                    []
+                  ],
+                  [
+                    "createPair",
+                    []
+                  ],
+                  [
+                    "setFeeTo",
+                    []
+                  ],
+                  [
+                    "setFeeToSetter",
+                    []
+                  ]
+                ]
+              },
+              "name": "IUniswapV2Factory"
+            },
+            "source_mapping": {}
+          },
+          {
+            "type": "pretty_table",
+            "name": {
+              "content": {
+                "fields_names": [
+                  "Function",
+                  "Modifiers"
+                ],
+                "rows": [
+                  [
+                    "name",
+                    []
+                  ],
+                  [
+                    "symbol",
+                    []
+                  ],
+                  [
+                    "decimals",
+                    []
+                  ],
+                  [
+                    "totalSupply",
+                    []
+                  ],
+                  [
+                    "balanceOf",
+                    []
+                  ],
+                  [
+                    "allowance",
+                    []
+                  ],
+                  [
+                    "approve",
+                    []
+                  ],
+                  [
+                    "transfer",
+                    []
+                  ],
+                  [
+                    "transferFrom",
+                    []
+                  ],
+                  [
+                    "DOMAIN_SEPARATOR",
+                    []
+                  ],
+                  [
+                    "PERMIT_TYPEHASH",
+                    []
+                  ],
+                  [
+                    "nonces",
+                    []
+                  ],
+                  [
+                    "permit",
+                    []
+                  ],
+                  [
+                    "MINIMUM_LIQUIDITY",
+                    []
+                  ],
+                  [
+                    "factory",
+                    []
+                  ],
+                  [
+                    "token0",
+                    []
+                  ],
+                  [
+                    "token1",
+                    []
+                  ],
+                  [
+                    "getReserves",
+                    []
+                  ],
+                  [
+                    "price0CumulativeLast",
+                    []
+                  ],
+                  [
+                    "price1CumulativeLast",
+                    []
+                  ],
+                  [
+                    "kLast",
+                    []
+                  ],
+                  [
+                    "mint",
+                    []
+                  ],
+                  [
+                    "burn",
+                    []
+                  ],
+                  [
+                    "swap",
+                    []
+                  ],
+                  [
+                    "skim",
+                    []
+                  ],
+                  [
+                    "sync",
+                    []
+                  ],
+                  [
+                    "initialize",
+                    []
+                  ]
+                ]
+              },
+              "name": "IUniswapV2Pair"
+            },
+            "source_mapping": {}
+          },
+          {
+            "type": "pretty_table",
+            "name": {
+              "content": {
+                "fields_names": [
+                  "Function",
+                  "Modifiers"
+                ],
+                "rows": [
+                  [
+                    "factory",
+                    []
+                  ],
+                  [
+                    "WETH",
+                    []
+                  ],
+                  [
+                    "addLiquidity",
+                    []
+                  ],
+                  [
+                    "addLiquidityETH",
+                    []
+                  ],
+                  [
+                    "removeLiquidity",
+                    []
+                  ],
+                  [
+                    "removeLiquidityETH",
+                    []
+                  ],
+                  [
+                    "removeLiquidityWithPermit",
+                    []
+                  ],
+                  [
+                    "removeLiquidityETHWithPermit",
+                    []
+                  ],
+                  [
+                    "swapExactTokensForTokens",
+                    []
+                  ],
+                  [
+                    "swapTokensForExactTokens",
+                    []
+                  ],
+                  [
+                    "swapExactETHForTokens",
+                    []
+                  ],
+                  [
+                    "swapTokensForExactETH",
+                    []
+                  ],
+                  [
+                    "swapExactTokensForETH",
+                    []
+                  ],
+                  [
+                    "swapETHForExactTokens",
+                    []
+                  ],
+                  [
+                    "quote",
+                    []
+                  ],
+                  [
+                    "getAmountOut",
+                    []
+                  ],
+                  [
+                    "getAmountIn",
+                    []
+                  ],
+                  [
+                    "getAmountsOut",
+                    []
+                  ],
+                  [
+                    "getAmountsIn",
+                    []
+                  ],
+                  [
+                    "removeLiquidityETHSupportingFeeOnTransferTokens",
+                    []
+                  ],
+                  [
+                    "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens",
+                    []
+                  ],
+                  [
+                    "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+                    []
+                  ],
+                  [
+                    "swapExactETHForTokensSupportingFeeOnTransferTokens",
+                    []
+                  ],
+                  [
+                    "swapExactTokensForETHSupportingFeeOnTransferTokens",
+                    []
+                  ]
+                ]
+              },
+              "name": "IUniswapV2Router02"
+            },
+            "source_mapping": {}
+          },
+          {
+            "type": "pretty_table",
+            "name": {
+              "content": {
+                "fields_names": [
+                  "Function",
+                  "Modifiers"
+                ],
+                "rows": [
+                  [
+                    "constructor",
+                    []
+                  ],
+                  [
+                    "owner",
+                    []
+                  ],
+                  [
+                    "renounceOwnership",
+                    [
+                      "onlyOwner"
+                    ]
+                  ],
+                  [
+                    "transferOwnership",
+                    [
+                      "onlyOwner"
+                    ]
+                  ],
+                  [
+                    "_transferOwnership",
+                    []
+                  ],
+                  [
+                    "_msgSender",
+                    []
+                  ],
+                  [
+                    "_msgData",
+                    []
+                  ],
+                  [
+                    "constructor",
+                    []
+                  ],
+                  [
+                    "name",
+                    []
+                  ],
+                  [
+                    "symbol",
+                    []
+                  ],
+                  [
+                    "decimals",
+                    []
+                  ],
+                  [
+                    "totalSupply",
+                    []
+                  ],
+                  [
+                    "balanceOf",
+                    []
+                  ],
+                  [
+                    "transfer",
+                    []
+                  ],
+                  [
+                    "allowance",
+                    []
+                  ],
+                  [
+                    "approve",
+                    []
+                  ],
+                  [
+                    "transferFrom",
+                    []
+                  ],
+                  [
+                    "increaseAllowance",
+                    []
+                  ],
+                  [
+                    "decreaseAllowance",
+                    []
+                  ],
+                  [
+                    "_transfer",
+                    []
+                  ],
+                  [
+                    "_mint",
+                    []
+                  ],
+                  [
+                    "_burn",
+                    []
+                  ],
+                  [
+                    "_approve",
+                    []
+                  ],
+                  [
+                    "_beforeTokenTransfer",
+                    []
+                  ],
+                  [
+                    "name",
+                    []
+                  ],
+                  [
+                    "symbol",
+                    []
+                  ],
+                  [
+                    "decimals",
+                    []
+                  ],
+                  [
+                    "totalSupply",
+                    []
+                  ],
+                  [
+                    "balanceOf",
+                    []
+                  ],
+                  [
+                    "allowance",
+                    []
+                  ],
+                  [
+                    "transfer",
+                    []
+                  ],
+                  [
+                    "approve",
+                    []
+                  ],
+                  [
+                    "transferFrom",
+                    []
+                  ],
+                  [
+                    "constructor",
+                    [
+                      "onlyOwner"
+                    ]
+                  ],
+                  [
+                    "receive",
+                    []
+                  ],
+                  [
+                    "claimStuckTokens",
+                    [
+                      "onlyOwner"
+                    ]
+                  ],
+                  [
+                    "excludeFromFees",
+                    [
+                      "onlyOwner"
+                    ]
+                  ],
+                  [
+                    "isExcludedFromFees",
+                    []
+                  ],
+                  [
+                    "changeMarketingWallet",
+                    [
+                      "onlyOwner"
+                    ]
+                  ],
+                  [
+                    "enableTrading",
+                    [
+                      "onlyOwner"
+                    ]
+                  ],
+                  [
+                    "_transfer",
+                    []
+                  ],
+                  [
+                    "slitherConstructorVariables",
+                    []
+                  ]
+                ]
+              },
+              "name": "XTwitter"
+            },
+            "source_mapping": {}
+          }
+        ],
+        "description": "\nContract SafeMath\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m add      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m sub      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m sub      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mul      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m div      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m div      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mod      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mod      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract SafeMathInt\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function                            \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mul                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m div                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m sub                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m add                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m abs                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m toUint256Safe                       \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m slitherConstructorConstantVariables \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract SafeMathUint\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function     \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m toInt256Safe \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract IUniswapV2Factory\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function       \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m feeTo          \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m feeToSetter    \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getPair        \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allPairs       \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allPairsLength \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m createPair     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m setFeeTo       \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m setFeeToSetter \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract IUniswapV2Pair\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function             \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m name                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m symbol               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m decimals             \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m totalSupply          \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m balanceOf            \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allowance            \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m approve              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transfer             \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transferFrom         \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m DOMAIN_SEPARATOR     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m PERMIT_TYPEHASH      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m nonces               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m permit               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m MINIMUM_LIQUIDITY    \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m factory              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m token0               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m token1               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getReserves          \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m price0CumulativeLast \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m price1CumulativeLast \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m kLast                \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mint                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m burn                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swap                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m skim                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m sync                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m initialize           \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract IUniswapV2Router02\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function                                                  \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m factory                                                   \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m WETH                                                      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m addLiquidity                                              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m addLiquidityETH                                           \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidity                                           \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityETH                                        \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityWithPermit                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityETHWithPermit                              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactTokensForTokens                                  \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapTokensForExactTokens                                  \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactETHForTokens                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapTokensForExactETH                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactTokensForETH                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapETHForExactTokens                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m quote                                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getAmountOut                                              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getAmountIn                                               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getAmountsOut                                             \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getAmountsIn                                              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityETHSupportingFeeOnTransferTokens           \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityETHWithPermitSupportingFeeOnTransferTokens \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactTokensForTokensSupportingFeeOnTransferTokens     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactETHForTokensSupportingFeeOnTransferTokens        \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactTokensForETHSupportingFeeOnTransferTokens        \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract XTwitter\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function                    \u001b[34m|\u001b[0m\u001b[96m     Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m constructor                 \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m owner                       \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m renounceOwnership           \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transferOwnership           \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _transferOwnership          \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _msgSender                  \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _msgData                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m constructor                 \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m name                        \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m symbol                      \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m decimals                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m totalSupply                 \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m balanceOf                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transfer                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allowance                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m approve                     \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transferFrom                \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m increaseAllowance           \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m decreaseAllowance           \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _transfer                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _mint                       \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _burn                       \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _approve                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _beforeTokenTransfer        \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m name                        \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m symbol                      \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m decimals                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m totalSupply                 \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m balanceOf                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allowance                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transfer                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m approve                     \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transferFrom                \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m constructor                 \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m receive                     \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m claimStuckTokens            \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m excludeFromFees             \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m isExcludedFromFees          \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m changeMarketingWallet       \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m enableTrading               \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _transfer                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m slitherConstructorVariables \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m",
+        "markdown": "\nContract SafeMath\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m add      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m sub      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m sub      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mul      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m div      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m div      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mod      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mod      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract SafeMathInt\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function                            \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mul                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m div                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m sub                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m add                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m abs                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m toUint256Safe                       \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m slitherConstructorConstantVariables \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract SafeMathUint\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function     \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m toInt256Safe \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract IUniswapV2Factory\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function       \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m feeTo          \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m feeToSetter    \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getPair        \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allPairs       \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allPairsLength \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m createPair     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m setFeeTo       \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m setFeeToSetter \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract IUniswapV2Pair\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function             \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m name                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m symbol               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m decimals             \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m totalSupply          \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m balanceOf            \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allowance            \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m approve              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transfer             \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transferFrom         \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m DOMAIN_SEPARATOR     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m PERMIT_TYPEHASH      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m nonces               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m permit               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m MINIMUM_LIQUIDITY    \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m factory              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m token0               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m token1               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getReserves          \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m price0CumulativeLast \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m price1CumulativeLast \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m kLast                \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m mint                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m burn                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swap                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m skim                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m sync                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m initialize           \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract IUniswapV2Router02\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function                                                  \u001b[34m|\u001b[0m\u001b[96m Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m factory                                                   \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m WETH                                                      \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m addLiquidity                                              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m addLiquidityETH                                           \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidity                                           \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityETH                                        \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityWithPermit                                 \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityETHWithPermit                              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactTokensForTokens                                  \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapTokensForExactTokens                                  \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactETHForTokens                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapTokensForExactETH                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactTokensForETH                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapETHForExactTokens                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m quote                                                     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getAmountOut                                              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getAmountIn                                               \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getAmountsOut                                             \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m getAmountsIn                                              \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityETHSupportingFeeOnTransferTokens           \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m removeLiquidityETHWithPermitSupportingFeeOnTransferTokens \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactTokensForTokensSupportingFeeOnTransferTokens     \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactETHForTokensSupportingFeeOnTransferTokens        \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m swapExactTokensForETHSupportingFeeOnTransferTokens        \u001b[34m|\u001b[0m\u001b[96m        [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m\nContract XTwitter\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m Function                    \u001b[34m|\u001b[0m\u001b[96m     Modifiers \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m constructor                 \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m owner                       \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m renounceOwnership           \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transferOwnership           \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _transferOwnership          \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _msgSender                  \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _msgData                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m constructor                 \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m name                        \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m symbol                      \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m decimals                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m totalSupply                 \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m balanceOf                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transfer                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allowance                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m approve                     \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transferFrom                \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m increaseAllowance           \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m decreaseAllowance           \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _transfer                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _mint                       \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _burn                       \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _approve                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _beforeTokenTransfer        \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m name                        \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m symbol                      \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m decimals                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m totalSupply                 \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m balanceOf                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m allowance                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transfer                    \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m approve                     \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m transferFrom                \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m constructor                 \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m receive                     \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m claimStuckTokens            \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m excludeFromFees             \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m isExcludedFromFees          \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m changeMarketingWallet       \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m enableTrading               \u001b[34m|\u001b[0m\u001b[96m ['onlyOwner'] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m _transfer                   \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[34m|\u001b[0m\u001b[96m slitherConstructorVariables \u001b[34m|\u001b[0m\u001b[96m            [] \u001b[34m|\u001b[0m\u001b[96m\n\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[34m-\u001b[0m\u001b[96m\u001b[36m+\u001b[0m\u001b[96m\u001b[0m",
+        "first_markdown_element": "",
+        "id": "392a4acd09213f82f981bbdd15003fe7e0985cb32479000cb354a4fb02a38c73",
+        "printer": "modifiers"
+      }
+    ]
+  }
+}

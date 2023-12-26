@@ -1,0 +1,78 @@
+{
+  "token": {
+    "name": "PEPE ANIMAL CLOTHING",
+    "symbol": "PAC",
+    "decimals": 9,
+    "address": "0x8c420a81786935DD4A90ff0B40083089Bce1535C",
+    "totalHolders": 461
+  },
+  "withToken": {
+    "name": "Wrapped BNB",
+    "symbol": "WBNB",
+    "decimals": 18,
+    "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+    "totalHolders": 1780868
+  },
+  "simulationSuccess": true,
+  "honeypotResult": {
+    "isHoneypot": false
+  },
+  "simulationResult": {
+    "buyTax": 24.99782769414915,
+    "sellTax": 24.304165450897845,
+    "transferTax": 24.99,
+    "buyGas": "210505",
+    "sellGas": "124575"
+  },
+  "holderAnalysis": {
+    "holders": "1",
+    "successful": "1",
+    "failed": "0",
+    "siphoned": "0",
+    "averageTax": 24.33,
+    "averageGas": 191417,
+    "highestTax": 24.33,
+    "highTaxWallets": "0",
+    "taxDistribution": [
+      {
+        "tax": 24,
+        "count": 1
+      }
+    ],
+    "snipersFailed": 0,
+    "snipersSuccess": 0
+  },
+  "flags": [
+    "medium_tax"
+  ],
+  "contractCode": {
+    "openSource": true,
+    "rootOpenSource": true,
+    "isProxy": false,
+    "hasProxyCalls": false
+  },
+  "chain": {
+    "id": "56",
+    "name": "Binance Smart Chain",
+    "shortName": "bsc",
+    "currency": "BNB"
+  },
+  "router": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+  "pair": {
+    "pair": {
+      "name": "PancakeSwap V2: PAC-WBNB",
+      "address": "0x6A2579B40bd1546dC0Ecb4861F73d797bbc438f0",
+      "token0": "0x8c420a81786935DD4A90ff0B40083089Bce1535C",
+      "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "type": "UniswapV2"
+    },
+    "chainId": "56",
+    "reserves0": "13338716809609763",
+    "reserves1": "21775878152418609254",
+    "liquidity": 11011.190546551994,
+    "router": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+    "createdAtTimestamp": "1701092843",
+    "creationTxHash": "0xc6c26ccf62831630763fe9cf8729496ca719e229b97d80f48b8fe91009a5e297"
+  },
+  "pairAddress": "0x6A2579B40bd1546dC0Ecb4861F73d797bbc438f0"
+}

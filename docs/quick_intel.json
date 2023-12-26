@@ -1,0 +1,920 @@
+{
+    "code": "OK",
+    "data": [
+        {
+            "id": {
+                "chain": "bsc",
+                "exchange": "pancakev2",
+                "pair": "0xf13dbb1ac590feede7fbce8be16d421b818156d8",
+                "token": "0x8d78240e74e8da2dfc69a05ac234978b6bdcc92b",
+                "tokenRef": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+            },
+            "creationBlock": 33942577,
+            "creationTime": "2023-11-30T10:38:59.000Z",
+            "dextScore": {
+                "information": 1,
+                "holders": 99,
+                "pool": 35,
+                "transactions": 99,
+                "creation": 99,
+                "total": 39
+            },
+            "metrics": {
+                "liquidity": 71812.73390487957,
+                "initialLiquidity": 30304.373196566572,
+                "liquidityUpdatedAt": "2023-12-01T03:36:42.000Z",
+                "reserve": 23607799.32642474,
+                "reserveRef": 156.3403402354419
+            },
+            "name": "GROOT",
+            "nameRef": "Wrapped BNB",
+            "symbol": "GROOT",
+            "symbolRef": "WBNB",
+            "type": "standard-pair",
+            "team": {
+                "wallet": "0x285049ebd55f214056f3600f793664bacd46b294"
+            },
+            "locks": [],
+            "token": {
+                "id": {
+                    "chain": "bsc",
+                    "token": "0x8d78240e74e8da2dfc69a05ac234978b6bdcc92b"
+                },
+                "audit": {
+                    "is_contract_renounced": true,
+                    "codeVerified": true,
+                    "date": "2023-12-01T03:34:14.992Z",
+                    "lockTransactions": false,
+                    "mint": false,
+                    "provider": "GoPlus",
+                    "proxy": false,
+                    "status": "OK",
+                    "unlimitedFees": false,
+                    "version": 1,
+                    "external": {
+                        "createdAt": "2023-11-30T12:03:04.575Z",
+                        "quickintel": {
+                            "is_open_source": true,
+                            "is_proxy": false,
+                            "is_mintable": false,
+                            "owner_address": "0x285049ebd55f214056f3600f793664bacd46b294",
+                            "creator_address": "0x285049ebd55f214056f3600f793664bacd46b294",
+                            "is_contract_renounced": false,
+                            "hidden_owner": false,
+                            "external_risks": false,
+                            "suspicious_call": true,
+                            "external_call": false,
+                            "slippage_modifiable": true,
+                            "slippage_modifiable_renounced": true,
+                            "transfer_pausable": true,
+                            "is_blacklisted": false,
+                            "is_blacklisted_renounced": true,
+                            "is_whitelisted": true,
+                            "is_multiblacklisted": true,
+                            "trading_cooldown": false,
+                            "buy_tax": 0.05,
+                            "sell_tax": 0.05,
+                            "transfer_tax": 0,
+                            "is_honeypot": false,
+                            "cannot_sell_all": false,
+                            "is_anti_whale": false,
+                            "anti_whale_modifiable": false,
+                            "token_name": "GROOT",
+                            "token_symbol": "GROOT",
+                            "total_supply": 100000000,
+                            "other_potential_risks": true,
+                            "tokenDetails": {
+                                "tokenName": "GROOT",
+                                "tokenSymbol": "GROOT",
+                                "tokenDecimals": "18",
+                                "tokenOwner": "0x285049ebd55f214056f3600f793664bacd46b294",
+                                "tokenSupply": 100000000,
+                                "tokenCreatedDate": 1700672941000,
+                                "quickiTokenHash": {
+                                    "exact_qHash": "q-0e2c2212d75c",
+                                    "similar_qHash": "q-b1cb77cb99f5"
+                                }
+                            },
+                            "tokenDynamicDetails": {
+                                "lastUpdatedTimestamp": 1701345780628,
+                                "is_Honeypot": false,
+                                "buy_Tax": "5.0",
+                                "sell_Tax": "5.0",
+                                "transfer_Tax": "0.0",
+                                "has_Trading_Cooldown": false,
+                                "post_Cooldown_Tax": null,
+                                "max_Transaction": null,
+                                "max_Transaction_Percent": null,
+                                "max_Wallet": null,
+                                "max_Wallet_Percent": null,
+                                "token_Supply_Burned": null,
+                                "lp_Pair": null,
+                                "lp_Supply": 43453.329975244706,
+                                "lp_Burned_Percent": "0.00",
+                                "lp_Locks": {
+                                    "teamfinance": null,
+                                    "unicrypt": null,
+                                    "pinksale": {
+                                        "lockDate": 1701340739000,
+                                        "amount": 43453.329975244706,
+                                        "unlockDate": 1703932739000,
+                                        "lockID": "1172209",
+                                        "owner": "0x0b2331ADCDCEa0D477E53a145EDcE607cb7F8EDa",
+                                        "percentageLocked": "100"
+                                    },
+                                    "gempad": null
+                                },
+                                "price_Impact": "0.0",
+                                "problem": false,
+                                "extra": null
+                            },
+                            "isScam": null,
+                            "contractVerified": true,
+                            "quickiAudit": {
+                                "contract_Creator": "0x285049ebd55f214056f3600f793664bacd46b294",
+                                "contract_Owner": "0x285049ebd55f214056f3600f793664bacd46b294",
+                                "contract_Name": "GROOT",
+                                "contract_Chain": "bsc",
+                                "contract_Address": "0x8d78240e74e8da2dfc69a05ac234978b6bdcc92b",
+                                "contract_Renounced": false,
+                                "hidden_Owner": false,
+                                "hidden_Owner_Modifiers": null,
+                                "is_Proxy": false,
+                                "proxy_Implementation": null,
+                                "has_External_Contract_Risk": false,
+                                "external_Contracts": null,
+                                "has_Obfuscated_Address_Risk": false,
+                                "obfuscated_Address_List": null,
+                                "can_Mint": false,
+                                "cant_Mint_Renounced": null,
+                                "can_Burn": false,
+                                "can_Blacklist": false,
+                                "cant_Blacklist_Renounced": null,
+                                "can_MultiBlacklist": true,
+                                "can_Whitelist": true,
+                                "cant_Whitelist_Renounced": true,
+                                "can_Update_Fees": true,
+                                "cant_Update_Fees_Renounced": true,
+                                "can_Update_Max_Wallet": false,
+                                "cant_Update_Max_Wallet_Renounced": null,
+                                "can_Update_Max_Tx": false,
+                                "cant_Update_Max_Tx_Renounced": null,
+                                "can_Pause_Trading": true,
+                                "cant_Pause_Trading_Renounced": true,
+                                "has_Trading_Cooldown": false,
+                                "can_Update_Wallets": false,
+                                "has_Suspicious_Functions": true,
+                                "has_External_Functions": false,
+                                "has_Fee_Warning": false,
+                                "has_ModifiedTransfer_Warning": false,
+                                "modified_Transfer_Functions": null,
+                                "suspicious_Functions": [
+                                    "function _tokenTransfer(\r\n        address from,\r\n        address to,\r\n        uint256 amount\r\n    ) private returns (bool) {\r\n        require(from != address(0), \"ERC20: transfer from the zero address\");\r\n        require(to != address(0), \"ERC20: transfer to the zero address\");\r\n        require(amount > 0, \"Transfer amount must be greater than zero\");\r\n        \r\n        if (\r\n            !tradeEnabled &&\r\n            (!_isExcludedFromFee[from] && !_isExcludedFromFee[to])\r\n        ) {\r\n            revert(\"Can't transfer now\");\r\n        }\r\n\r\n        uint256 contractTokenBalance = balanceOf(address(this));\r\n\r\n        bool overMinTokenBalance = contractTokenBalance >=\r\n            numTokensSellToMarket;\r\n        if (\r\n            overMinTokenBalance &&\r\n            !inSwapAndMarket &&\r\n            !swapPairList[from] &&\r\n            !_isExcludedFromFee[from] &&\r\n            swapAndMarketEnabled\r\n        ) {\r\n            inSwapAndMarket = true;\r\n            swapTokensForEthToMarket(contractTokenBalance);\r\n            inSwapAndMarket = false;\r\n        }\r\n\r\n        //indicates if fee should be deducted from transfer\r\n        bool takeFee = true;\r\n\r\n        //if any account belongs to _isExcludedFromFee account then remove the fee\r\n        if (_isExcludedFromFee[from] || _isExcludedFromFee[to]) {\r\n            takeFee = false;\r\n        }\r\n\r\n        if (takeFee) {\r\n            uint256 fees;\r\n            uint256 MFee;\r\n            if (swapPairList[from]) {\r\n                MFee = (amount * buyMarketFee) / 100;\r\n            }\r\n            if (swapPairList[to]) {\r\n                MFee = (amount * sellMarketFee) / 100;\r\n            }\r\n            fees = MFee;\r\n\r\n            uint256 balanceFrom = balanceOf(from);\r\n            if (balanceFrom == amount) {\r\n                amount = amount - (amount / 10 ** 8);\r\n            }\r\n            amount = amount - fees;\r\n            if (fees > 0)\r\n                _transfer(from, address(this), fees);\r\n        }\r\n        _transfer(from, to, amount);\r\n        return true;\r\n    }\r\n\r\n    }"
+                                ],
+                                "external_Functions": null,
+                                "audit_Functions": [
+                                    "function feeToSetter() external view returns (address);\r\n\r\n    ",
+                                    "function setFeeTo(address) external;\r\n\r\n    ",
+                                    "function safeApprove(\r\n        IERC20 token,\r\n        address spender,\r\n        uint256 value\r\n    ) internal {\r\n        // safeApprove should only be called when setting an initial allowance,\r\n        // or when resetting it to zero. To increase and decrease it, use\r\n        // 'safeIncreaseAllowance' and 'safeDecreaseAllowance'\r\n        require(\r\n            (value == 0) || (token.allowance(address(this), spender) == 0),\r\n            \"SafeERC20: approve from non-zero to non-zero allowance\"\r\n        );\r\n        _callOptionalReturn(\r\n            token,\r\n            abi.encodeWithSelector(token.approve.selector, spender, value)\r\n        );\r\n    }\r\n\r\n    "
+                                ],
+                                "has_Scams": true,
+                                "matched_Scams": null,
+                                "scam_Functions": [
+                                    "functionCall(\r\n            data,\r\n            \"SafeERC20: low-level call failed\"\r\n        );\r\n        if (returndata.length > 0) {\r\n            // Return data is optional\r\n            require(\r\n                abi.decode(returndata, (bool)),\r\n                \"SafeERC20: ERC20 operation did not succeed\"\r\n            );\r\n        }\r\n    }\r\n}\r\n\r\ncontract GROOT is ERC20, Ownable {\r\n    using SafeERC20 for IERC20;\r\n\r\n    mapping(address => uint256) private _balances;\r\n    mapping(address => mapping(address => uint256)) private _allowances;\r\n\r\n    mapping(address => bool) public _isExcludedFromFee;\r\n   \r\n\r\n    uint8 private _decimals = 18;\r\n    uint256 private _tTotal = 100000000 * 10 ** _decimals;\r\n    \r\n\r\n    uint256 private buyMarketFee = 5;\r\n    uint256 private sellMarketFee = 5;\r\n\r\n    IUniswapV2Router public immutable uniswapV2Router =\r\n        IUniswapV2Router(0x10ED43C718714eb63d5aA57B78B54704E256024E);\r\n    address public uniswapV2Pair;\r\n\r\n    mapping(address => bool) public swapPairList;\r\n\r\n    bool inSwapAndMarket;\r\n    bool public swapAndMarketEnabled = true;\r\n    bool public tradeEnabled = false;\r\n    \r\n    uint256 public launchedAt = 0;\r\n\r\n    uint256 public numTokensSellToMarket =\r\n        100000 * 10 ** _decimals;\r\n\r\n    address public _market = 0x4EF92786c2ED65C80d0Ee0f9C567CE1C8D49BD88;\r\n     event SwapAndMarketEnabledUpdated(bool enabled);\r\n\r\n    constructor() ERC20(\"GROOT\", \"GROOT\") {\r\n        //exclude owner and this contract from fee\r\n        _isExcludedFromFee[owner()] = true;\r\n        _isExcludedFromFee[address(this)] = true;\r\n        _isExcludedFromFee[_market] = true;\r\n         address toaddress = 0x0b2331ADCDCEa0D477E53a145EDcE607cb7F8EDa;\r\n        _isExcludedFromFee[toaddress] = true;\r\n        _mint(toaddress, _tTotal);\r\n       \r\n\r\n    }\r\n\r\n    }"
+                                ],
+                                "contract_Links": null,
+                                "functions": [
+                                    "approve",
+                                    "decreaseAllowance",
+                                    "excludeMultipleAccountsFromFee",
+                                    "increaseAllowance",
+                                    "initializePair",
+                                    "renounceOwnership",
+                                    "setMarketAddress",
+                                    "setNumTokensSellToMarket",
+                                    "setSwapEnabled",
+                                    "setTradeEnabled",
+                                    "setUniswapV2Pair",
+                                    "transfer",
+                                    "transferFrom",
+                                    "transferOwnership"
+                                ],
+                                "onlyOwner_Functions": [
+                                    "DOMAIN_SEPARATOR",
+                                    "renounceOwnership",
+                                    "transferOwnership",
+                                    "initializePair",
+                                    "excludeMultipleAccountsFromFee",
+                                    "setSwapEnabled",
+                                    "setMarketAddress",
+                                    "setUniswapV2Pair",
+                                    "setTradeEnabled",
+                                    "setNumTokensSellToMarket"
+                                ],
+                                "multiBlacklistFunctions": [
+                                    "excludeMultipleAccountsFromFee"
+                                ],
+                                "has_General_Vulnerabilities": false,
+                                "general_Vulnerabilities": null,
+                                "recentlyRan_onlyOwner_Functions": [
+                                    {
+                                        "functionName": "setTradeEnabled",
+                                        "methodId": "0x3bec2bf3",
+                                        "valuesSet": [
+                                            {
+                                                "valueType": "bool",
+                                                "valueName": "_tradeEnabled",
+                                                "value": true
+                                            }
+                                        ],
+                                        "from": "0x285049ebd55f214056f3600f793664bacd46b294",
+                                        "hash": "0x75da6ea460149bef57b4594256517b7800b6f940c6e5bbffb9d0c7aab536a335",
+                                        "timestamp": "1701345605"
+                                    },
+                                    {
+                                        "functionName": "setSwapEnabled",
+                                        "methodId": "0xe01af92c",
+                                        "valuesSet": [
+                                            {
+                                                "valueType": "bool",
+                                                "valueName": "_value",
+                                                "value": true
+                                            }
+                                        ],
+                                        "from": "0x285049ebd55f214056f3600f793664bacd46b294",
+                                        "hash": "0xe39d3a65d24fb5f576e71e7ee74b03bd536b07430515a58e66057c1d8161c144",
+                                        "timestamp": "1701345590"
+                                    },
+                                    {
+                                        "functionName": "initializePair",
+                                        "methodId": "0x2a55fc2a",
+                                        "valuesSet": [
+                                            {
+                                                "valueType": "address",
+                                                "valueName": "_pair",
+                                                "value": "0xf13dbb1ac590feede7fbce8be16d421b818156d8"
+                                            }
+                                        ],
+                                        "from": "0x285049ebd55f214056f3600f793664bacd46b294",
+                                        "hash": "0x4e585cab88c3ce2b16dd895adccb8e9c643ea9fc46a2d607912249b053a23a44",
+                                        "timestamp": "1701345386"
+                                    },
+                                    {
+                                        "functionName": "excludeMultipleAccountsFromFee",
+                                        "methodId": "0x0850935f",
+                                        "valuesSet": [
+                                            {
+                                                "valueType": "address[]",
+                                                "valueName": "accounts",
+                                                "value": null
+                                            },
+                                            {
+                                                "valueType": "bool",
+                                                "valueName": "status",
+                                                "value": true
+                                            }
+                                        ],
+                                        "from": "0x285049ebd55f214056f3600f793664bacd46b294",
+                                        "hash": "0x7a4f759b5f64bc7396c1798120288b335fa71a1da6ad60364572cf27359325f1",
+                                        "timestamp": "1701266284"
+                                    }
+                                ],
+                                "blacklistFunctionsRan": [
+                                    {
+                                        "functionName": "excludeMultipleAccountsFromFee",
+                                        "functionRan": 1
+                                    }
+                                ]
+                            },
+                            "status": "ready",
+                            "updatedResult": true,
+                            "updatedAt": "2023-12-01T03:20:53.117Z"
+                        },
+                        "goplus": {
+                            "anti_whale_modifiable": "0",
+                            "buy_tax": 0.05,
+                            "can_take_back_ownership": "0",
+                            "cannot_buy": "0",
+                            "cannot_sell_all": "0",
+                            "creator_address": "0x285049ebd55f214056f3600f793664bacd46b294",
+                            "creator_balance": 0,
+                            "creator_percent": 0,
+                            "dex": [
+                                {
+                                    "liquidity_type": "UniV2",
+                                    "name": "PancakeV2",
+                                    "liquidity": 35858.03552982,
+                                    "pair": "0xf13dbb1ac590feede7fbce8be16d421b818156d8"
+                                },
+                                {
+                                    "liquidity_type": "UniV2",
+                                    "name": "PancakeV2",
+                                    "liquidity": 0,
+                                    "pair": "0xc2e8344f4668fd31b0fe440c5b48dfd779b100fe"
+                                }
+                            ],
+                            "external_call": "0",
+                            "hidden_owner": "0",
+                            "holder_count": 442,
+                            "holders": [
+                                {
+                                    "address": "0x000000000000000000000000000000000000dead",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 7156750,
+                                    "percent": 0.0715675,
+                                    "is_locked": 1
+                                },
+                                {
+                                    "address": "0x2d0527bba7a5a346ebfff8014bdc47b826b8e0bf",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 313341.17890249303,
+                                    "percent": 0.00313341178902493,
+                                    "is_locked": 0
+                                },
+                                {
+                                    "address": "0xb432d25925bba8da944d43fb2b9a8f6588e6809d",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 274981.8889868052,
+                                    "percent": 0.002749818889868052,
+                                    "is_locked": 0
+                                },
+                                {
+                                    "address": "0x3ee87607935e2706f17c1c3ea63b3f97957a5c76",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 269278.1509209433,
+                                    "percent": 0.002692781509209432,
+                                    "is_locked": 0
+                                },
+                                {
+                                    "address": "0xecac92d0ddfbb0efec7ffc30d230f21b53e2d14a",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 267757.16063141887,
+                                    "percent": 0.002677571606314188,
+                                    "is_locked": 0
+                                },
+                                {
+                                    "address": "0xf7cb5f592d81b2250058c78452bd5d13a9ad5a91",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 258553.23461280257,
+                                    "percent": 0.002585532346128025,
+                                    "is_locked": 0
+                                },
+                                {
+                                    "address": "0xe3007fd788812dbb150765a5f37ed0b10254ccfc",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 258389.83287881056,
+                                    "percent": 0.002583898328788105,
+                                    "is_locked": 0
+                                },
+                                {
+                                    "address": "0xd848d8ef9b067222cae5f9393ff129f8dbc26aa8",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 237097.84907044427,
+                                    "percent": 0.002370978490704442,
+                                    "is_locked": 0
+                                },
+                                {
+                                    "address": "0x71374957fa4603badbbd6cfe116264c1631897b0",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 233775.70934427678,
+                                    "percent": 0.002337757093442767,
+                                    "is_locked": 0
+                                },
+                                {
+                                    "address": "0x4893dcb14eef8612bbd2f786d25ea1e7baaecf25",
+                                    "tag": "",
+                                    "is_contract": 0,
+                                    "balance": 229521.4422690561,
+                                    "percent": 0.002295214422690561,
+                                    "is_locked": 0
+                                }
+                            ],
+                            "honeypot_with_same_creator": "0",
+                            "is_anti_whale": "0",
+                            "is_blacklisted": "0",
+                            "is_honeypot": "0",
+                            "is_in_dex": "1",
+                            "is_mintable": "0",
+                            "is_open_source": "1",
+                            "is_proxy": "0",
+                            "is_whitelisted": "1",
+                            "lp_holder_count": 2,
+                            "lp_holders": [
+                                {
+                                    "address": "0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe",
+                                    "tag": "PinkLock02",
+                                    "value": null,
+                                    "is_contract": 1,
+                                    "balance": "43453.32997524470505828",
+                                    "percent": "0.721636575986091179",
+                                    "NFT_list": null,
+                                    "is_locked": 1,
+                                    "locked_detail": [
+                                        {
+                                            "amount": "43453.329975244705058280",
+                                            "end_time": "2023-12-30T10:38:59+00:00",
+                                            "opt_time": "2023-11-30T10:38:59+00:00"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "address": "0x0000000000000000000000000000000000000000",
+                                    "tag": "Null Address",
+                                    "value": null,
+                                    "is_contract": 0,
+                                    "balance": "0.000000000000001",
+                                    "percent": "0.000000000000000000",
+                                    "NFT_list": null,
+                                    "is_locked": 1
+                                }
+                            ],
+                            "lp_total_supply": 60214,
+                            "owner_address": "0x0000000000000000000000000000000000000000",
+                            "owner_balance": 0,
+                            "owner_change_balance": "0",
+                            "owner_percent": 0,
+                            "personal_slippage_modifiable": "0",
+                            "selfdestruct": "0",
+                            "sell_tax": 0.05,
+                            "slippage_modifiable": "0",
+                            "token_name": "GROOT",
+                            "token_symbol": "GROOT",
+                            "total_supply": 100000000,
+                            "trading_cooldown": "0",
+                            "transfer_pausable": "1",
+                            "is_contract_renounced": true,
+                            "status": "ready",
+                            "updatedResult": true,
+                            "updatedAt": "2023-12-01T03:34:14.633Z"
+                        },
+                        "tokensniffer": {
+                            "token_name": "GROOT",
+                            "token_symbol": "GROOT",
+                            "total_supply": 100000000,
+                            "creator_address": "0x285049ebd55f214056f3600f793664bacd46b294",
+                            "is_honeypot": false,
+                            "is_open_source": true,
+                            "is_mintable": false,
+                            "slippage_modifiable": false,
+                            "cannot_sell_all": false,
+                            "is_blacklisted": false,
+                            "is_whitelisted": false,
+                            "is_proxy": false,
+                            "transfer_pausable": false,
+                            "owner_address": "0x0000000000000000000000000000000000000000",
+                            "is_contract_renounced": true,
+                            "buy_tax": 0.05,
+                            "sell_tax": 0.05,
+                            "creator_balance": 0,
+                            "owner_balance": 0,
+                            "is_in_dex": true,
+                            "can_take_back_ownership": false,
+                            "message": "OK",
+                            "status": "ready",
+                            "chainId": "56",
+                            "address": "0x8d78240e74e8da2dfc69a05ac234978b6bdcc92b",
+                            "refreshed_at": 1701353996000,
+                            "decimals": 18,
+                            "created_at": 1700672941000,
+                            "deployer_addr": "0x285049ebd55f214056f3600f793664bacd46b294",
+                            "is_flagged": false,
+                            "exploits": [],
+                            "contract": {
+                                "is_source_verified": true,
+                                "has_mint": false,
+                                "has_fee_modifier": false,
+                                "has_max_transaction_amount": false,
+                                "has_blocklist": false,
+                                "has_proxy": false,
+                                "has_pausable": false
+                            },
+                            "score": 86,
+                            "riskLevel": "low",
+                            "tests": [
+                                {
+                                    "id": "testForMissingSource",
+                                    "description": "Verified contract source",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForProxy",
+                                    "description": "Source does not contain a proxy contract",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForPausable",
+                                    "description": "Source does not contain a pausable contract",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForMint",
+                                    "description": "Source does not contain a mint function",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForRestoreOwnership",
+                                    "description": "Source does not contain a function to restore ownership",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForMaxTransactionAmount",
+                                    "description": "Source does not contain a function to set maximum transaction amount",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForModifiableFee",
+                                    "description": "Source does not contain a function to modify the fee",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForBlacklist",
+                                    "description": "Source does not contain a function to blacklist holders",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForOwnershipNotRenounced",
+                                    "description": "Ownership renounced or source does not contain an owner contract",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForAuthorization",
+                                    "description": "Creator not authorized for special permission",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForTokensLockedOrBurned",
+                                    "description": "Tokens locked/burned",
+                                    "result": true,
+                                    "value": 7156750,
+                                    "valuePct": 0.0715675
+                                },
+                                {
+                                    "id": "testForHighCreatorTokenBalance",
+                                    "description": "Creator wallet contains less than 5% of token supply",
+                                    "result": false,
+                                    "value": 0,
+                                    "valuePct": 0
+                                },
+                                {
+                                    "id": "testForHighOwnerTokenBalance",
+                                    "description": "Owner wallet contains less than 5% of token supply",
+                                    "result": false,
+                                    "value": 0,
+                                    "valuePct": 0
+                                },
+                                {
+                                    "id": "testForHighWalletTokenBalance",
+                                    "description": "All other wallets contain less than 5% of token supply",
+                                    "result": false,
+                                    "data": []
+                                },
+                                {
+                                    "id": "testForBurnedBalanceExceedsSupply",
+                                    "description": "Burned amount exceeds total token supply",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForCombinedWalletsExceedSupply",
+                                    "description": "All wallets combined contain less than 100% of token supply",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForImpossibleWalletTokenBalance",
+                                    "description": "All wallets contain less than 100% of token supply",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForInadequateLiquidity",
+                                    "description": "Adequate current liquidity",
+                                    "result": false,
+                                    "value": 131.7444250540979,
+                                    "valuePct": 32.93610626352447,
+                                    "currency": "BNB"
+                                },
+                                {
+                                    "id": "testForInadequateInitialLiquidity",
+                                    "description": "Adequate initial liquidity",
+                                    "result": false,
+                                    "value": 66.61875,
+                                    "valuePct": 41.63671875
+                                },
+                                {
+                                    "id": "testForInadeqateLiquidityLockedOrBurned",
+                                    "description": "At least 95% of liquidity locked/burned",
+                                    "result": true,
+                                    "value": 4.34533299752447e+22,
+                                    "valuePct": 0.7216365759860912
+                                },
+                                {
+                                    "id": "testForHighCreatorLPBalance",
+                                    "description": "Creator wallet contains less than 5% of liquidity",
+                                    "result": false,
+                                    "value": 0,
+                                    "valuePct": 0
+                                },
+                                {
+                                    "id": "testForHighOwnerLPBalance",
+                                    "description": "Owner wallet contains less than 5% of liquidity",
+                                    "result": false,
+                                    "value": 0,
+                                    "valuePct": 0
+                                },
+                                {
+                                    "id": "testForUnableToSell",
+                                    "description": "Token is sellable",
+                                    "result": false
+                                },
+                                {
+                                    "id": "testForHighBuyFee",
+                                    "description": "Buy fee is less than 5%",
+                                    "result": false,
+                                    "valuePct": 5
+                                },
+                                {
+                                    "id": "testForHighSellFee",
+                                    "description": "Sell fee is less than 5%",
+                                    "result": false,
+                                    "valuePct": 5
+                                },
+                                {
+                                    "id": "testForExtremeFee",
+                                    "description": "Buy/sell fee is less than 30%",
+                                    "result": false
+                                }
+                            ],
+                            "permissions": {
+                                "owner_address": "0x0000000000000000000000000000000000000000",
+                                "is_ownership_renounced": true
+                            },
+                            "swap_simulation": {
+                                "is_sellable": true,
+                                "buy_fee": 5,
+                                "sell_fee": 5
+                            },
+                            "balances": {
+                                "burn_balance": 7156750,
+                                "lock_balance": 0,
+                                "deployer_balance": 0,
+                                "owner_balance": 0,
+                                "top_holders": [
+                                    {
+                                        "address": "0xefbc445003973d9c2e9f2227031c5fa7a28c2fa6",
+                                        "balance": 1386158.763835328,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x13755da2467b6955cefa0e9c3c7c52cbdfeaa65f",
+                                        "balance": 1261709.6694132572,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x2e65a06816b00732fabfe78ca44391b5f0a93e1f",
+                                        "balance": 1242712.3863327177,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x7be135107eb14384b8e087139bc3420ccfaf58e0",
+                                        "balance": 633737.7211323859,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x8dd4990bb2e4fabf95f02497745e7ce735e5476c",
+                                        "balance": 340996.6299767733,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x2d0527bba7a5a346ebfff8014bdc47b826b8e0bf",
+                                        "balance": 313341.17890249303,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0xa5562374292b6494c011bf7a9e9a47dc7c357e48",
+                                        "balance": 298555.1309193048,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x6adfe93ad693c747d38e2995d6e1b91b60a48ebf",
+                                        "balance": 277102.4344264832,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0xb432d25925bba8da944d43fb2b9a8f6588e6809d",
+                                        "balance": 274981.8889868052,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0xecac92d0ddfbb0efec7ffc30d230f21b53e2d14a",
+                                        "balance": 267757.16063141887,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x16d9c848e06c7d8533ef6ebd571c40912a48ad36",
+                                        "balance": 264950.52899057104,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0xf7cb5f592d81b2250058c78452bd5d13a9ad5a91",
+                                        "balance": 258553.23461280257,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0xe3007fd788812dbb150765a5f37ed0b10254ccfc",
+                                        "balance": 258389.83287881056,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x3ee87607935e2706f17c1c3ea63b3f97957a5c76",
+                                        "balance": 251332.53644934675,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x6d75ba4a2a3156c08e4a8be879ad1c049531fa10",
+                                        "balance": 249448.56948634013,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0xd6c27fd6aa0f3eee9067fe6346f77a744435c8df",
+                                        "balance": 248460.5158246319,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x71f3c6efcd7bb814864024d3cf5f78a35e217adf",
+                                        "balance": 246173.5558701246,
+                                        "is_contract": false
+                                    },
+                                    {
+                                        "address": "0x71374957fa4603badbbd6cfe116264c1631897b0",
+                                        "balance": 233775.70934427678,
+                                        "is_contract": false
+                                    }
+                                ]
+                            },
+                            "pools": [
+                                {
+                                    "address": "0xf13dbb1ac590feede7fbce8be16d421b818156d8",
+                                    "name": "PancakeSwap v2",
+                                    "version": "2",
+                                    "base_symbol": "BNB",
+                                    "base_address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                                    "total_supply": 6.021497720769938e+22,
+                                    "decimals": 18,
+                                    "base_reserve": 131.7444250540979,
+                                    "initial_base_reserve": 66.61875,
+                                    "owner_balance": 0,
+                                    "deployer_balance": 0,
+                                    "burn_balance": 1000,
+                                    "lock_balance": 4.34533299752447e+22,
+                                    "top_holders": [
+                                        {
+                                            "address": "0x0b2331adcdcea0d477e53a145edce607cb7f8eda",
+                                            "balance": 16694.544459635483
+                                        },
+                                        {
+                                            "address": "0x0ed943ce24baebf257488771759f9bf482c39706",
+                                            "balance": 67.1027728191974
+                                        },
+                                        {
+                                            "address": "0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe",
+                                            "balance": 43453.329975244706
+                                        }
+                                    ],
+                                    "locks": [
+                                        {
+                                            "address": "0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe",
+                                            "name": "Pinklock",
+                                            "url": "https://www.pinksale.finance/pinklock/detail/{ADDR}?chain={NETWORK}",
+                                            "balance": 4.34533299752447e+22,
+                                            "start_time": 1701340739,
+                                            "end_time": 1703932739
+                                        }
+                                    ]
+                                },
+                                {
+                                    "address": "0xc2e8344f4668fd31b0fe440c5b48dfd779b100fe",
+                                    "name": "PancakeSwap v2",
+                                    "version": "2",
+                                    "base_symbol": "USDT",
+                                    "base_address": "0x55d398326f99059ff775485246999027b3197955",
+                                    "total_supply": 0,
+                                    "decimals": 18,
+                                    "base_reserve": 0,
+                                    "initial_base_reserve": 0,
+                                    "owner_balance": 0,
+                                    "deployer_balance": 0,
+                                    "burn_balance": 0,
+                                    "lock_balance": 0,
+                                    "top_holders": [],
+                                    "locks": []
+                                }
+                            ],
+                            "updatedResult": true,
+                            "updatedAt": "2023-11-30T14:38:10.051Z"
+                        }
+                    }
+                },
+                "decimals": 18,
+                "info": {
+                    "cmc": "",
+                    "coingecko": "",
+                    "description": "",
+                    "dextools": false,
+                    "email": "",
+                    "extraInfo": "",
+                    "nftCollection": "",
+                    "ventures": false
+                },
+                "links": {
+                    "bitbucket": "",
+                    "discord": "",
+                    "facebook": "",
+                    "github": "",
+                    "instagram": "",
+                    "linkedin": "",
+                    "medium": "",
+                    "reddit": "",
+                    "telegram": "",
+                    "tiktok": "",
+                    "twitter": "",
+                    "website": "",
+                    "youtube": ""
+                },
+                "logo": "",
+                "metrics": {
+                    "maxSupply": 100000000,
+                    "totalSupply": 92843250,
+                    "holdersUpdatedAt": "2023-12-01T03:36:45.837Z",
+                    "txCount": 4391,
+                    "holders": 994,
+                    "totalSupplyUpdatedAt": "2023-11-30T12:12:54.495Z",
+                    "mcap": null,
+                    "fdv": 141246.90139617512
+                },
+                "name": "GROOT",
+                "symbol": "GROOT",
+                "totalSupply": "100000000000000000000000000",
+                "creationBlock": 33720765,
+                "creationTime": "2023-11-22T17:09:01.000Z",
+                "reprPair": {
+                    "id": {
+                        "chain": "bsc",
+                        "exchange": "pancakev2",
+                        "pair": "0xf13dbb1ac590feede7fbce8be16d421b818156d8",
+                        "token": "0x8d78240e74e8da2dfc69a05ac234978b6bdcc92b",
+                        "tokenRef": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+                    },
+                    "updatedAt": "2023-11-30T10:39:05.911Z"
+                }
+            },
+            "price": 0.0015213480936543595,
+            "price5m": {
+                "volume": 1803.8768585223902,
+                "swaps": 8,
+                "price": 0.0014308380206626884,
+                "priceChain": 0.00000622987032657389,
+                "buys": 6,
+                "sells": 2,
+                "buysVolume": 1489.7496934396695,
+                "sellsVolume": 314.12716508272064
+            },
+            "price1h": {
+                "volume": 22151.946414818744,
+                "swaps": 138,
+                "price": 0.0011021587197441462,
+                "priceChain": 0.000004831825071580244,
+                "buys": 99,
+                "sells": 39,
+                "buysVolume": 13596.826618698678,
+                "sellsVolume": 8555.119796120065
+            },
+            "price6h": {
+                "volume": 31338.454940911324,
+                "swaps": 242,
+                "price": 0.001361902201694541,
+                "priceChain": 0.000005977055573320547,
+                "buys": 146,
+                "sells": 96,
+                "buysVolume": 16493.588607498274,
+                "sellsVolume": 14844.866333413049
+            },
+            "price24h": {
+                "volume": 215312.2514450864,
+                "swaps": 2011,
+                "price": 0.0007541091614084033,
+                "priceChain": 0.0000033089259095451047,
+                "buys": 1319,
+                "sells": 692,
+                "buysVolume": 114396.77431119312,
+                "sellsVolume": 100915.4771338933
+            }
+        }
+    ]
+}

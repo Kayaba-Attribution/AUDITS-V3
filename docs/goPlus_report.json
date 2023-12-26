@@ -1,0 +1,209 @@
+{
+  "code": 1,
+  "message": "OK",
+  "result": {
+    "0x8c420a81786935dd4a90ff0b40083089bce1535c": {
+      "anti_whale_modifiable": "0",
+      "buy_tax": "0.25",
+      "can_take_back_ownership": "0",
+      "cannot_buy": "0",
+      "cannot_sell_all": "0",
+      "creator_address": "0x61d40fc665e8a4fb2ef26b636a9c432dd1a65f7d",
+      "creator_balance": "750005.006412637",
+      "creator_percent": "0.035715",
+      "dex": [
+        {
+          "liquidity_type": "UniV2",
+          "name": "PancakeV2",
+          "liquidity": "5270.48166704",
+          "pair": "0x6a2579b40bd1546dc0ecb4861f73d797bbc438f0"
+        }
+      ],
+      "external_call": "0",
+      "hidden_owner": "0",
+      "holder_count": "462",
+      "holders": [
+        {
+          "address": "0x6a2579b40bd1546dc0ecb4861f73d797bbc438f0",
+          "tag": "PancakeV2",
+          "is_contract": 1,
+          "balance": "13337444.680872418",
+          "percent": "0.635116413374877047",
+          "is_locked": 0
+        },
+        {
+          "address": "0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe",
+          "tag": "PinkLock02",
+          "is_contract": 1,
+          "balance": "6082818.40863179",
+          "percent": "0.289658019458656666",
+          "is_locked": 1,
+          "locked_detail": [
+            {
+              "amount": "2300000.000000000000000000",
+              "end_time": "2023-12-03T00:00:00+00:00",
+              "opt_time": "2023-11-28T08:16:25+00:00"
+            },
+            {
+              "amount": "1500000.000000000000000000",
+              "end_time": "2023-12-03T15:00:00+00:00",
+              "opt_time": "2023-11-28T08:16:25+00:00"
+            },
+            {
+              "amount": "750000.000000000000000000",
+              "end_time": "2023-12-10T10:00:00+00:00",
+              "opt_time": "2023-11-28T08:16:25+00:00"
+            },
+            {
+              "amount": "750000.000000000000000000",
+              "end_time": "2023-12-17T00:00:00+00:00",
+              "opt_time": "2023-11-28T08:16:25+00:00"
+            },
+            {
+              "amount": "750000.000000000000000000",
+              "end_time": "2024-01-31T00:00:00+00:00",
+              "opt_time": "2023-11-28T08:16:25+00:00"
+            }
+          ]
+        },
+        {
+          "address": "0x61d40fc665e8a4fb2ef26b636a9c432dd1a65f7d",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "750005.006412637",
+          "percent": "0.035714524114887476",
+          "is_locked": 0
+        },
+        {
+          "address": "0x1b1451daeb7d14314efba6e4ce965352de4d4932",
+          "tag": "",
+          "is_contract": 1,
+          "balance": "191965.360601014",
+          "percent": "0.009141207647667333",
+          "is_locked": 0
+        },
+        {
+          "address": "0x4b04213c2774f77e60702880654206b116d00508",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "105178.917086025",
+          "percent": "0.005008519861239285",
+          "is_locked": 0
+        },
+        {
+          "address": "0xd5157dd01bb1263a2bb99b87139aa432a69f9e42",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "92222.511760726",
+          "percent": "0.004391548179082190",
+          "is_locked": 0
+        },
+        {
+          "address": "0x06d3ded93595d4c9b3f5a3348cdf89e1fee984e7",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "79495.120493309",
+          "percent": "0.003785481928252809",
+          "is_locked": 0
+        },
+        {
+          "address": "0xc650b67f1ffd57db651e16ef2781e81616bab202",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "53725.671236602",
+          "percent": "0.002558365296981047",
+          "is_locked": 0
+        },
+        {
+          "address": "0x78f46008a967d54dbe81cdbadd7a6bb963ae6057",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "46711.979742199",
+          "percent": "0.002224379987723761",
+          "is_locked": 0
+        },
+        {
+          "address": "0xe3eb0a3acd4e0d542de02c61b8050aa36473ddca",
+          "tag": "",
+          "is_contract": 0,
+          "balance": "23362.772503549",
+          "percent": "0.001112512976359476",
+          "is_locked": 0
+        }
+      ],
+      "honeypot_with_same_creator": "0",
+      "is_anti_whale": "0",
+      "is_blacklisted": "0",
+      "is_honeypot": "0",
+      "is_in_dex": "1",
+      "is_mintable": "0",
+      "is_open_source": "1",
+      "is_proxy": "0",
+      "is_whitelisted": "1",
+      "lp_holder_count": "4",
+      "lp_holders": [
+        {
+          "address": "0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe",
+          "tag": "PinkLock02",
+          "value": null,
+          "is_contract": 1,
+          "balance": "0.516220494526038924",
+          "percent": "0.959180066489292919",
+          "NFT_list": null,
+          "is_locked": 1,
+          "locked_detail": [
+            {
+              "amount": "0.516220494526038924",
+              "end_time": "2024-05-29T14:59:59+00:00",
+              "opt_time": "2023-12-01T14:59:59+00:00"
+            }
+          ]
+        },
+        {
+          "address": "0x000000000000000000000000000000000000dead",
+          "tag": "",
+          "value": null,
+          "is_contract": 0,
+          "balance": "0.02191006765060143",
+          "percent": "0.040710704764219163",
+          "NFT_list": null,
+          "is_locked": 1
+        },
+        {
+          "address": "0x0ed943ce24baebf257488771759f9bf482c39706",
+          "tag": "",
+          "value": null,
+          "is_contract": 1,
+          "balance": "0.000058785747845941",
+          "percent": "0.000109228746486058",
+          "NFT_list": null,
+          "is_locked": 0
+        },
+        {
+          "address": "0x0000000000000000000000000000000000000000",
+          "tag": "Null Address",
+          "value": null,
+          "is_contract": 0,
+          "balance": "0.000000000000001",
+          "percent": "0.000000000000001858",
+          "NFT_list": null,
+          "is_locked": 1
+        }
+      ],
+      "lp_total_supply": "0.538189347924487295",
+      "owner_address": "0x61d40fc665e8a4fb2ef26b636a9c432dd1a65f7d",
+      "owner_balance": "750005.006412637",
+      "owner_change_balance": "0",
+      "owner_percent": "0.035715",
+      "personal_slippage_modifiable": "0",
+      "selfdestruct": "0",
+      "sell_tax": "0.2436",
+      "slippage_modifiable": "1",
+      "token_name": "PEPE ANIMAL CLOTHING",
+      "token_symbol": "PAC",
+      "total_supply": "21000000",
+      "trading_cooldown": "0",
+      "transfer_pausable": "0"
+    }
+  }
+}
