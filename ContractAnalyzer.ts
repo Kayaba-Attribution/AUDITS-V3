@@ -89,7 +89,7 @@ export const extractDetectorResults = async (detectors: Detector[]): Promise<Rec
     return detectorResults;
 };
 
-export const populateDetectorResults = async (detectorResults: Record<number, DetectorResult>): Promise<Record<number, DetectorResult>> => {
+export const populateDetectorResults = async (detectorResults: Record<string, DetectorResult>): Promise<Record<number, DetectorResult>> => {
     // Assuming vulnerabilitiesInfo is the JSON object read from the file
     const vulnerabilitiesInfo = JSON.parse(fs.readFileSync(config.vulnerabilitiesInfoPath, 'utf8'));
 
@@ -162,7 +162,7 @@ export const runSlither = async (contractPath: string, jsonOutputPath: string, o
 
     return new Promise((resolve, reject) => {
         // execute slither and save to json
-        exec(`slither ${contractPath} --json ${jsonOutputPath}`, async (error, stdout, stderr) => {
+        exec(`slither ${contractPath} --exclude naming-convention,unused-state,reentrancy-eth,reentrancy-benign,similar-names --json ${jsonOutputPath}`, async (error, stdout, stderr) => {
             if (error) {
                 // workaround for slither returning 255 when it finds issues
                 if (error.code === 255) {

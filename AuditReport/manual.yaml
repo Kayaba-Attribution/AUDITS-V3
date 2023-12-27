@@ -3,9 +3,19 @@
 token_address: "0x3a5efAEF111Ea4014812181C2dd07ce4887593dE"
 network: 56
 imageName: "aRK.png"
-url: "https://hub.docker.com/_/nginx"
+url: "https://hub.docker.commmmmm"
 telegram: "https://t.me/auditreport"
 description: "This token is the best in the market because it is the most secure and the most reliable."
+
+# Manual audit fields
+auditPassed: true
+maxTax: true
+maxWallet: true
+enableTrade: true
+modifyingTaxes: true
+canBlacklist: true
+pauseTrade: true
+
 
 # These will change later
 type: "ERC-20"

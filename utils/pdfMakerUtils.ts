@@ -4,15 +4,40 @@ import logger from '../logger';
 import config from '../ConfigurationManager';
 import { Holder } from '../types/GoPlusTypes';
 
-export function loadManual(manualFileName: string) {
+export type Manual = {
+    token_address: string;
+    network: number;
+    imageName: string;
+    url: string;
+    telegram: string;
+    description: string;
+    type: string;
+    auditPassed: boolean;
+    [key: string]: any;
+};
+
+export function loadManual(manualFileName: string): Manual | null {
     try {
         const manualData = fs.readFileSync(manualFileName, 'utf8');
-        const manualObject = yaml.load(manualData);
+        const manualObject: Manual = yaml.load(manualData) as Manual; // Add type assertion
         logger.info('Manual loaded successfully');
         return manualObject;
     } catch (error) {
         logger.error(`Error loading manual: ${error}`);
         return null;
+    }
+}
+
+export function updateApiReport(manual: Manual, apiReport: any) {
+    if (manual) {
+        // console.log the keys of manual
+        for (const key of Object.keys(manual)) {
+            apiReport[key] = manual[key];
+        }
+
+        logger.info('[main] loaded manual report from ' + config.manualReportPath);
+
+        fs.writeFileSync(config.jsonApiReportPath, JSON.stringify(apiReport, null, 2));
     }
 }
 

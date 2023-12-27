@@ -2,7 +2,7 @@ export interface DetectorResult {
     findType: string;
     title: string;
     check: string;
-    impact: string;
+    impact: string | ((rectCell: { x: any; y: any; width: any; height: any; }) => string);
     confidence: string;
     sourceTest: string;
     lines: number[];

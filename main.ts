@@ -9,7 +9,7 @@ import { getApiReport } from './api';
 
 import type { Detector } from './types/SlitherTypes';
 
-import { loadManual } from './utils/pdfMakerUtils';
+import { loadManual, Manual } from './utils/pdfMakerUtils';
 
 import { getContractSourceCode } from "./api";
 
@@ -19,15 +19,7 @@ async function main() {
 
     // ? load maual report
 
-    type Manual = {
-        token_address: string;
-        network: number;
-        imageName: string;
-        url: string;
-        telegram: string;
-        description: string;
-        type: string;
-    };
+
 
     // Assuming `loadManual` is defined in the same way as previously
     const manual = loadManual(config.manualReportPath) as unknown as Manual
@@ -51,20 +43,17 @@ async function main() {
 
     if (manual) {
 
-        // itereate over manual and add to apiReport
-
-        apiReport.imageName = manual.imageName;
-        apiReport.url = manual.url;
-        apiReport.telegram = manual.telegram;
-        apiReport.description = manual.description;
-        apiReport.type = manual.type;
+        // console.log the keys of manual
+        for (const key of Object.keys(manual)) {
+            apiReport[key] = manual[key];
+        }
 
         logger.info('[main] loaded manual report from ' + config.manualReportPath);
     }
 
     const pdfDataDisplay = {
         pairCreationTxHash: apiReport.pairCreationTxHash,
-        
+
     };
 
     // ? get Contract info and loaded to json
@@ -87,7 +76,7 @@ async function main() {
 
     // ? ONLY SLITHER DETECTORS
 
-    if( blockScanData) {
+    if (blockScanData) {
         let solcVersion = blockScanData.CompilerVersion.replace('v', '');
         // remove +commit.27d51765 from solc version
         solcVersion = solcVersion.split('+')[0];
