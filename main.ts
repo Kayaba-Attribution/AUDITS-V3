@@ -3,7 +3,15 @@ import logger from './logger';
 import config from './ConfigurationManager';
 import fs from 'fs';
 
-import { runSlither, changeSolcVersion, extractDetectorResults, populateDetectorResults } from './ContractAnalyzer';
+
+import {
+    runSlither,
+    changeSolcVersion,
+    extractDetectorResults,
+    populateDetectorResults,
+    runSlitherGetModifiers,
+    extractModifiers
+} from './ContractAnalyzer';
 
 import { getApiReport } from './api';
 
@@ -20,8 +28,6 @@ async function main() {
     // ? load maual report
 
 
-
-    // Assuming `loadManual` is defined in the same way as previously
     const manual = loadManual(config.manualReportPath) as unknown as Manual
 
     const token_address: string = manual.token_address;
@@ -38,6 +44,7 @@ async function main() {
     // ? API CALLS FOR TOKEN
 
     const apiReport = await getApiReport(token_address, network);
+
 
     logger.info('[main] saved api report to ' + config.jsonApiReportPath);
 
@@ -72,7 +79,7 @@ async function main() {
     delete apiReport.blockScanData.SourceCode;
     delete apiReport.blockScanData.ABI;
 
-    logger.info('[main] loaded blockScanData from ' + config.manualReportPath);
+    logger.info('[main] loaded blockScanData from ' + config.jsonApiReportPath);
 
     // ? ONLY SLITHER DETECTORS
 
@@ -80,21 +87,27 @@ async function main() {
         let solcVersion = blockScanData.CompilerVersion.replace('v', '');
         // remove +commit.27d51765 from solc version
         solcVersion = solcVersion.split('+')[0];
+        console.log("UPDATE SOLC VERSION:", solcVersion)
         await changeSolcVersion(solcVersion);
+        console.log("DONE")
     }
 
     const detectors: Detector[] = await runSlither(
         config.auditContractPath,
         config.jsonSlitherDetectorPath, true);
 
+    // SLITHER FINDER DETECTORS
     const cleaned = await extractDetectorResults(detectors);
-
     const cleanedWithMetadata = await populateDetectorResults(cleaned);
-
     fs.writeFileSync(config.jsonCleanDetectorPath, JSON.stringify(cleanedWithMetadata, null, 2));
-
     logger.info('[main] saved clean detector results to ' + config.jsonCleanDetectorPath);
 
+    // SLITHER MODDIFERS PRINTERS
+    const modifierPrinterData = await runSlitherGetModifiers(config.auditContractPath, config.jsonSlitherModifiersPath)
+    const cleanedMod = extractModifiers(modifierPrinterData)
+    apiReport.privilegeFunctions = cleanedMod
+    fs.writeFileSync(config.jsonSlitherCleanModifiersPath, JSON.stringify(cleanedMod, null, 2));
+    logger.info('[main] saved clean modifiers results to ' + config.jsonSlitherCleanModifiersPath);
 
     // final save
     fs.writeFileSync(config.jsonApiReportPath, JSON.stringify(apiReport, null, 2));

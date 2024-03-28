@@ -8,6 +8,7 @@ import config from './ConfigurationManager';
 // types
 import { SlitherOutput, Detector, SourceMapping } from './types/SlitherTypes';
 import { DetectorResult } from './types/DetectorTypes';
+import { Contract } from 'ethers';
 
 
 const extractSourceText = async (sourceMapping: SourceMapping): Promise<string> => {
@@ -42,7 +43,7 @@ export const loadSlitherOutput = async (jsonOutputPath: string, onlyDetectors?: 
 
         if (onlyDetectors) {
             if (!parsedJsonOutput || !parsedJsonOutput.results || !parsedJsonOutput.results) {
-                logger.error(`[loadSlitherOutput] Invalid data structure received from loadSlitherOutput`);
+                logger.error(`[loadSlitherOutput] Invalid data structure received from loadSlitherOutput`, jsonOutputPath);
                 throw new Error('Invalid data structure received from loadSlitherOutput');
             }
             const { detectors } = parsedJsonOutput.results;
@@ -149,6 +150,61 @@ export const changeSolcVersion = async (solcVersion: string): Promise<void> => {
     });
 }
 
+export const runSlitherGetModifiers = async (contractPath: string, jsonOutputPath: string): Promise<any | null> => {
+    try {
+        await unlink(jsonOutputPath); // Delete the file if it exists
+    } catch (err: any) {
+        // Only log error if it's not about the file's non-existence
+        if (err.code !== 'ENOENT') {
+            logger.error("[runSlitherGetModifiers] unlink jsonOutputPath error:", jsonOutputPath, err);
+        }
+    }
+
+    return new Promise((resolve, reject) => {
+        // execute slither and save to json
+        exec(`slither ${contractPath} --print modifiers --json ${jsonOutputPath}`, async (error, stdout, stderr) => {
+            if (error) {
+                logger.error("[runSlitherGetModifiers error] readFile jsonOutputPath error:", error);
+                reject(error.message);
+                return;
+            }
+
+            try {
+                const parsedJsonOutput: any = await loadSlitherOutput(jsonOutputPath);
+                resolve(parsedJsonOutput);
+                logger.info(`[runSlitherGetModifiers] Slither run successfully for ${contractPath} saved to ${jsonOutputPath}`);
+                return
+            } catch (readError) {
+                logger.error("[runSlither] readFile jsonOutputPath error:", readError);
+                reject(readError);
+            }
+
+
+        });
+    });
+
+}
+
+export const extractModifiers = (data: any): any => {
+    if (data && data.success == true) {
+        const { elements } = data.results.printers[0];
+
+        const lastContract = elements[elements.length - 1]
+
+        let modifiersTable = []
+
+        for (const row of lastContract.name.content.rows){
+            if(row[1].length != 0){
+                modifiersTable.push([row[0], row[1][0]])
+            }
+        }
+
+        logger.info(`[extractModifiers] successfully`);
+        return modifiersTable
+    }
+    logger.error(`[extractModifiers] data not found`);
+
+}
 
 export const runSlither = async (contractPath: string, jsonOutputPath: string, onlyDetectors?: boolean): Promise<SlitherOutput | Detector[] | any> => {
     try {
@@ -162,7 +218,7 @@ export const runSlither = async (contractPath: string, jsonOutputPath: string, o
 
     return new Promise((resolve, reject) => {
         // execute slither and save to json
-        exec(`slither ${contractPath} --exclude naming-convention,unused-state,reentrancy-eth,reentrancy-benign,similar-names --json ${jsonOutputPath}`, async (error, stdout, stderr) => {
+        exec(`slither ${contractPath} --exclude naming-convention,unused-state,reentrancy-eth,reentrancy-benign,similar-names,reentrancy-events,reentrancy-unlimited-gas --json ${jsonOutputPath}`, async (error, stdout, stderr) => {
             if (error) {
                 // workaround for slither returning 255 when it finds issues
                 if (error.code === 255) {

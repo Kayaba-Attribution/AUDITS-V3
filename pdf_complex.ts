@@ -7,7 +7,7 @@ let rawdata = fs.readFileSync('./AuditReport/api_report.json');
 let info = JSON.parse(rawdata);
 
 import { DetectorResult } from './types/DetectorTypes';
-
+import slitherFinds from './AuditReport/slither_detectors_clean.json'
 
 
 import config from './ConfigurationManager';
@@ -83,7 +83,11 @@ const INFO = (rectCell: { x: any; y: any; width: any; height: any; }) => {
 }
 let background = '#202729'
 
-let finds: Record<string, DetectorResult> = {
+let finds: Record<string, DetectorResult> = slitherFinds;
+
+
+
+let fdinds: Record<string, DetectorResult> = {
     "Unchecked transfer": {
         "numberOfDuplicates": 0,
         "findType": "function",
@@ -103,14 +107,6 @@ let finds: Record<string, DetectorResult> = {
         "description": "The return value of an external transfer/transferFrom call is not checked",
         "recommendation": "Use `SafeERC20`, or ensure that the transfer/transferFrom return value is checked.",
         "explanation": "\nSeveral tokens do not revert in case of failure and return false. If one of these tokens is used in `MyBank`, `deposit` will not revert if the transfer fails, and an attacker can call `deposit` for free.."
-    }
-}
-
-for (const key in finds) {
-    if (finds.hasOwnProperty(key)) {
-        const value = finds[key];
-        console.log(`Key: ${key}`);
-        console.log(`Value: ${JSON.stringify(value)}`);
     }
 }
 
@@ -146,7 +142,6 @@ let Language = "Solidity" // ! HARDCODE SOLIDITY
 let owner = info.owner_address
 
 let dex = info.dex[0]
-console.log(dex)
 let top10Token = getTop10Data(info.holders)
 let top10LP = getTop10Data(info.lp_holders)
 
@@ -155,7 +150,7 @@ let top10LP = getTop10Data(info.lp_holders)
 // ! still need to add
 let type = ""
 let liquidityLock = "-/-" // TODO add pinksale liquidity lock
-//PrivilegeFunctions = info.onlyOwnerTable
+PrivilegeFunctions = info.privilegeFunctions
 
 let DocName = `KISHIELD_${name}_Audit_${docTime}.pdf`
 
@@ -178,7 +173,7 @@ let Contracts = {
     ],
 };
 
-let doc = new PDFDocument({ size: 'A4', bufferPages: true });
+let doc = new PDFDocument({ size: 'A4', bufferPages: true, lineBreak: false });
 // ! Default saves audit locally
 let destination = "./Audits_Temporal/" + DocName
 // ! --save flag saves the audit pdf and updates JSON on production
@@ -207,6 +202,20 @@ if (process.argv.includes("--save")) {
     console.log("SAVED to:", destination)
     doc.pipe(fs.createWriteStream(destination));
 }
+
+doc.on('pageAdded', () => {
+
+    doc.rect(0, 795, 190, 50);
+    doc.fill(getGradient(doc));
+
+    doc.rect(0, 0, 595.28, 850);
+    doc.fill(backgroundMain);
+
+
+    doc.image('background/page.png', 0, 0, { width: 600 })
+
+
+});
 
 const page = doc.page;
 console.log('maxWidth=', page.width, ', maxHeight=', page.height);
@@ -285,8 +294,11 @@ doc.fill(titleColor).stroke();
 doc.moveDown(0.5);
 doc.fontSize(40).font('fonts/rbold.ttf')
     .text("Risk Analysis")
-doc.moveDown(1);
+doc.fill(textColor).stroke().fontSize(14).moveDown(0.5).font('fonts/Roboto-Regular.ttf').fillColor(textColor)
+doc.text("The table below provides a comprehensive summary of the project's risk analysis, emphasizing high-risk functions that could potentially transform the contract into a honeypot.").moveDown(0.5)
+    .text(' This analysis is derived from the critical insights of our thorough audit, focusing on the implications and impact of these findings on the overall integrity and security of the project.').moveDown(0.5)
 
+doc.moveDown(1)
 const quickCheckClassification: any = (value: any, indexColumn: number, indexRow: number, row: any, rectRow: any, rectCell: any) => {
     const { x, y, width, height } = rectCell;
     if (indexColumn < 1) {
@@ -518,11 +530,17 @@ doc.fontSize(15).font('fonts/Roboto-Bold.ttf')
     .moveDown(0.5).font('fonts/Roboto-Regular.ttf')
     .text('    6.1 Findings Table')
     .moveDown(0.5).font('fonts/Roboto-Regular.ttf')
-for (var i = 1; i <= finds.length - 1; i++) {
-    doc.text(`    ${"0" + i} ${finds[i][0]}  `)
-        .moveDown(0.5)
 
+var i = 0
+let findCounter = 1
+for (const name in finds) {
+    if (finds.hasOwnProperty(name)) {
+        doc.text(`    ${"0" + findCounter} ${name}  `)
+            .moveDown(0.5)
+    }
+    findCounter++
 }
+
 doc.fontSize(15).font('fonts/Roboto-Bold.ttf').fillColor(titleColor)
     .text('7  Statistics').font('fonts/Roboto-Bold.ttf')
     .moveDown(0.5).font('fonts/Roboto-Regular.ttf').fillColor(textColor)
@@ -705,6 +723,125 @@ doc.table(Contracts, {
 // Move down a bit to provide space between lists
 doc.moveDown(0.5);
 
+// ---------------------------------------------------------------------------------------------------------------------
+//                                                  Statistics
+// ---------------------------------------------------------------------------------------------------------------------
+
+doc.rect(0, 795, 190, 50);
+doc.fill(getGradient(doc));
+doc.addPage({
+    size: 'A4',
+    margin: 60
+})
+
+doc.rect(0, 0, 595.28, 841.89);
+doc.fill(backgroundMain);
+doc.image('background/page.png', 0, 0, { width: 600 })
+doc.fill(titleColor).stroke();
+doc.fontSize(30).font('fonts/rbold.ttf')
+    .text("Statistics")
+doc.moveDown(0.2);
+doc.fontSize(16).font('fonts/rbold.ttf')
+    .text("Liquidity Info")
+doc.moveDown(1);
+
+
+
+const liqInfo = {
+    headers: [
+        { label: "  Parameter", headerColor: titleColor },
+        { label: `Result`, headerColor: titleColor },
+    ],
+    rows: [
+        ['  Pair Address', dex.pair],
+        [`  ${symbol} Reserves`, `${dex.reserve0} ${symbol}`],
+        [`  ${baseToken} Reserves`, `${dex.reserve1} ${baseToken}`],
+        [`  Liquidity Value`, `$${Math.round(dex.liquidity)} USD`],
+    ],
+};
+// **********  lp info table  ***********
+
+doc.table(liqInfo, {
+    columnSpacing: 10,
+    width: 490,
+    columnsSize: [130, 360],
+    prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(12), // {Function}
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
+});
+
+doc.moveDown(1);
+
+
+doc.fill(titleColor).stroke();
+doc.fontSize(16).font('fonts/rbold.ttf')
+    .text(`Token (${symbol}) Holders Info`)
+doc.moveDown(1);
+
+const tokenInfo = {
+    headers: [
+        { label: "  Parameter", headerColor: titleColor },
+        { label: `Result`, headerColor: titleColor },
+    ],
+    rows: [
+        [`  ${symbol} Percentage Locked`, `${roundToNearestHundredth(top10Token.percentageLocked)}%`],
+        [`  ${symbol} Amount Locked`, `${parseNumber(top10Token.totalLocked)} ${symbol}`],
+        ['  Top 10 Percentage Own', `${roundToNearestHundredth(top10Token.totalPercentages)}%`],
+        ['  Top 10 Amount Owned', `${parseNumber(top10Token.totalAmount)} ${symbol}`],
+        // ['  Top 10 Aprox Value',  `$${crw[1][2][0]} USD`],
+    ],
+};
+
+// **********  token holders table  ***********
+doc.table(tokenInfo, {
+    columnSpacing: 10,
+    width: 490,
+    columnsSize: [170, 320],
+    prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
+});
+// Move down a bit to provide space between lists
+doc.moveDown(0.5);
+
+doc.fill(titleColor).stroke();
+doc.fontSize(16).font('fonts/rbold.ttf')
+    .text(`LP (${symbol}/${baseToken}) Holders Info`)
+doc.moveDown(1.5);
+
+
+const lpInfo = {
+    headers: [
+        { label: "  Parameter", headerColor: titleColor },
+        { label: `Result`, headerColor: titleColor },
+    ],
+    rows: [
+        [`  ${symbol}/${baseToken} % Locked`, `${roundToNearestHundredth(top10LP.percentageLocked * 100)}%`],
+        [`  ${symbol}/${baseToken} Amount Locked`, `${parseNumber(top10LP.totalLocked)} ${symbol}/${baseToken}`],
+        ['  Top 10 Percentage Owned', `${roundToNearestHundredth(top10LP.totalPercentages * 100)}%`],
+        ['  Top 10 Amount Owned', `${parseNumber(top10LP.totalAmount)} ${symbol}/${baseToken}`],
+        // ['  Locked Tokens Percentage',  `${crw[2][2][0]}%`],
+        // ['  Locked Tokens Amount',  `${crw[2][2][1]} ${symbol}/${baseToken}`],
+    ],
+};
+
+// 0x71b8214D3b69e101feE63d53364bAACB950e6C88
+
+// **********  lp holders table  ***********
+doc.table(lpInfo, {
+    columnSpacing: 10,
+    width: 490,
+    columnsSize: [190, 320],
+    prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
+});
+// Move down a bit to provide space between lists
+doc.moveUp(0.5);
+
+doc.font("fonts/Roboto-Regular.ttf").fontSize(6).fillColor(textColor)
+    .text(`* All the data diplayed above was taken on-chain on ${docTimeWithSlashes}`)
+    .text(`* Data is delivered as is, we do not take responsibility for any errors or omissions in the data`)
+
+
+
 // ? ---------------------------------------------------------------------------------------------------------------------
 // !                                                GENERAL CHECKS
 // ? ---------------------------------------------------------------------------------------------------------------------
@@ -825,7 +962,7 @@ doc.fontSize(30).font('fonts/rbold.ttf')
 
 
 if (owner != "no" && owner != "none" && owner != "0x0000000000000000000000000000000000000000") {
-    console.log(owner)
+    console.log('Owner', owner)
     doc.moveDown(0.2)
     doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor)
         .text(`The contract ownership of ${name} is not currently renounced. The ownership of the contract grants special powers to the protocol creators, making them the sole addresses that can call sensible ownable functions that may alter the state of the protocol.`, { align: "center" })
@@ -931,10 +1068,19 @@ doc.fontSize(16).text(`Read carefully the notes section and make your own decisi
 //doc.text(`  Audit Passed`, { align: "left" })
 //LOGO
 doc.moveDown(0.5);
-//doc.fontSize(30).text(`Audit Passed`, { align: "center" })
-doc.fontSize(30).text(`TEST Audit `, { align: "center" })
-//doc.image('symbols/check.png', 250, 650, { width: 100 })
-//doc.image('symbols/err.png', 250, 680, { width: 80 })
+if (info.auditPassed) {
+    doc.fontSize(30).text(`Audit Passed`, { align: "center" })
+    const yLocation = doc.y + 10;
+    doc.image('symbols/check.png', 250, yLocation, { width: 100 })
+}
+else {
+    doc.fontSize(30).text(`Audit Failed`, { align: "center" })
+    const yLocation = doc.y + 10;
+    doc.image('symbols/high.png', 240, yLocation - 10, { width: 100 })
+    doc.image('symbols/err.png', 250, yLocation, { width: 80 })
+}
+
+//doc.fontSize(30).text(`TEST Audit `, { align: "center" })
 
 
 doc.fontSize(30).font('fonts/rbold.ttf').fill('#b20000').stroke()
@@ -1022,21 +1168,20 @@ let total_findigs = 0;
 for (const name in finds) {
     if (finds.hasOwnProperty(name)) {
         const value = finds[name];
-        console.log(`Key: ${name}`);
         if (finds[name].impact == "High") {
-            finds[name].impact = HIGH
+            //finds[name].impact = HIGH
             high++
         }
         if (finds[name].impact == "Medium") {
-            finds[name].impact = MEDIUM
+            //finds[name].impact = MEDIUM
             medium++
         }
         if (finds[name].impact == "Low") {
-            finds[name].impact = LOW
+            //finds[name].impact = LOW
             low++
         }
         if (finds[name].impact == "Informational") {
-            finds[name].impact = INFO
+            // finds[name].impact = INFO
             informational++
         }
     }
@@ -1099,50 +1244,47 @@ class Finding {
     datas!: { [key: string]: string; }[];
 
     constructor(id: number, severity: string | ((rectCell: { x: any; y: any; width: any; height: any; }) => string), detector: string, description: string) {
-        console.log(typeof severity)
-        if (typeof severity !== 'string') {
-            this.id = id;
-            this.severity = severity;
-            this.detector = detector;
-            this.description = description;
-            this.headers = [
-                { label: "ID ", property: 'id', width: 40, renderer: null },
-                { label: "Severity", property: 'severity', width: 100, renderer: this.severity },
-                { label: "Detector", property: 'detector', width: 100, renderer: null },
-                { label: "Description", property: 'description', width: 240, renderer: null },
-            ];
-            this.datas = [
-                {
-                    id: `    ${"0" + this.id}`,
-                    detector: `${this.detector}`,
-                    description: `${this.description}`
-                },
-            ];
-        }
+        // if (typeof severity !== 'string') {
+        this.id = id;
+        this.severity = severity;
+        this.detector = detector;
+        this.description = description;
+        this.headers = [
+            { label: "ID ", property: 'id', width: 30, renderer: null },
+            { label: "Severity", property: 'severity', width: 50, renderer: null },
+            { label: "Detector", property: 'detector', width: 100, renderer: null },
+            { label: "Description", property: 'description', width: 290, renderer: null },
+        ];
+        this.datas = [
+            {
+                id: `    ${"0" + this.id}`,
+                detector: `${this.detector}`,
+                description: `${this.description}`,
+                severity: `${this.severity}`
+            },
+        ];
+        // }
     }
 }
 
-console.log(finds)
 
+let counter = 1
+const findsKeys = Object.keys(finds);
+const findsLength = findsKeys.length;
 for (const name in finds) {
     if (finds.hasOwnProperty(name)) {
         const value = finds[name];
-        // console.log(`Key: ${name}`);
+        console.log(`Key: ${name}`);
         // console.log(`Value: ${JSON.stringify(value)}`);
 
-        doc.fontSize(17).font('fonts/rbold.ttf')
+        doc.fontSize(18).font('fonts/rbold.ttf').fillColor(titleColor)
             .text(name)
             .moveDown()
-        
-        const entrie = new Finding(i, finds[name].impact, finds[name].check, finds[name].description || 'default')
-        console.log("entrie", entrie)
 
-        doc.table(
-            new Finding(i,
-                finds[name].impact,
-                finds[name].check,
-                finds[name].description || 'default'
-            ), {
+        const entrie = new Finding(counter, finds[name].impact, finds[name].check, finds[name].description || 'default')
+
+        counter++
+        doc.table(entrie, {
             columnSpacing: 8,
             prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
             prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
@@ -1152,6 +1294,14 @@ for (const name in finds) {
 
         doc.fontSize(15).font('fonts/rbold.ttf').fillColor(titleColor)
             .text("Description")
+        doc.moveDown(0.5)
+        doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor)
+            .text(finds[name].title)
+        doc.moveDown(0.5)
+
+
+        doc.fontSize(15).font('fonts/rbold.ttf').fillColor(titleColor)
+            .text("Exploit Example")
         doc.moveDown(0.5)
         doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor)
             .text(finds[name].exploit)
@@ -1174,6 +1324,20 @@ for (const name in finds) {
         //     doc.fill(titleColor).stroke();
         // }
 
+
+        doc.rect(0, 795, 190, 50);
+        doc.fill(getGradient(doc));
+
+        doc.addPage({
+            size: 'A4',
+            margin: 60
+        })
+        doc.rect(0, 0, 595.28, 850);
+        doc.fill(backgroundMain);
+        doc.image('background/page.png', 0, 0, { width: 600 })
+
+
+
     }
 
 }
@@ -1188,188 +1352,71 @@ let OnlyOwnerTable = {
     headers: [
         { label: "  Function Name", headerColor: titleColor },
         { label: `Parameters`, headerColor: titleColor },
-        { label: `Visibility`, headerColor: titleColor },
+        // { label: `Visibility`, headerColor: titleColor },
     ],
     rows: [
     ],
 };
 
-// PrivilegeFunctions.forEach(e => {
-//     if (e[0] != null) {
-//         OnlyOwnerTable.rows.push(e as [string, string, string])
-//     }
+PrivilegeFunctions.forEach(e => {
+    if (e[0] != null) {
+        OnlyOwnerTable.rows.push(e as [string, string])
+    }
+})
+
+
+
+// doc.rect(0, 795, 190, 50);
+// doc.fill(getGradient(doc));
+
+// doc.addPage({
+//     size: 'A4',
+//     margin: 60
 // })
 
-console.log(OnlyOwnerTable.rows)
-console.log(OnlyOwnerTable.rows.length)
-
-if (!skipFindingPage) {
-    doc.rect(0, 795, 190, 50);
-    doc.fill(getGradient(doc));
-    doc.addPage({
-        size: 'A4',
-        margin: 60
-    })
-    doc.image('background/page.png', 0, 0, { width: 600 })
-    doc.fill(titleColor).stroke();
-}
+// doc.rect(0, 0, 595.28, 841.89);
+// doc.fill(backgroundMain);
+doc.fill(titleColor).stroke();
 
 doc.fontSize(20).font('fonts/rbold.ttf')
-    .text("Privileged Functions (onlyOwner & Others)")
+    .text("Privileged Functions (onlyOwner & Others)").fillColor(titleColor)
 doc.moveDown(1.5);
 
 doc.table(OnlyOwnerTable, {
 
     columnSpacing: 10,
     //width: 490,
-    columnsSize: [200, 220, 90],
+    columnsSize: [300, 150],
     padding: 20,
     align: "center",
-    prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(13), // {Function}
+    prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(13).fillColor(titleColor), // {Function}
     prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor), // {Function}
 });
 
 
 
-// ---------------------------------------------------------------------------------------------------------------------
-//                                                  Statistics
-// ---------------------------------------------------------------------------------------------------------------------
 
-doc.rect(0, 795, 190, 50);
-doc.fill(getGradient(doc));
-doc.addPage({
-    size: 'A4',
-    margin: 60
-})
+// doc.rect(0, 795, 190, 50);
+// doc.fill(getGradient(doc));
 
-doc.rect(0, 0, 595.28, 841.89);
-doc.fill(backgroundMain);
-doc.image('background/page.png', 0, 0, { width: 600 })
-doc.fill(titleColor).stroke();
-doc.fontSize(30).font('fonts/rbold.ttf')
-    .text("Statistics")
-doc.moveDown(0.2);
-doc.fontSize(16).font('fonts/rbold.ttf')
-    .text("Liquidity Info")
-doc.moveDown(1);
+// doc.addPage({
+//     size: 'A4',
+//     margin: 60
+// })
 
+// doc.rect(0, 0, 595.28, 841.89);
+// doc.fill(backgroundMain);
+// doc.image('background/page.png', 0, 0, { width: 600 })
 
+// doc.fill(titleColor).stroke();
+// doc.fontSize(20).font('fonts/rbold.ttf')
+// //doc.moveDown(2).text(`Liquidity Ownership`, { continued: false, align: "center" })
+// //doc.font("fonts/Roboto-Regular.ttf").fontSize(14).fillColor(textColor)
+// //doc.moveDown().text(`The token does not have liquidity at the moment of the audit, block ${crw[3]}`, { align: "center" })
 
-const liqInfo = {
-    headers: [
-        { label: "  Parameter", headerColor: titleColor },
-        { label: `Result`, headerColor: titleColor },
-    ],
-    rows: [
-        ['  Pair Address', dex.pair],
-        [`  ${symbol} Reserves`, `${dex.reserve0} ${symbol}`],
-        [`  ${baseToken} Reserves`, `${dex.reserve1} ${baseToken}`],
-        [`  Liquidity Value`, `$${Math.round(dex.liquidity)} USD`],
-    ],
-};
-// **********  lp info table  ***********
-
-doc.table(liqInfo, {
-    columnSpacing: 10,
-    width: 490,
-    columnsSize: [130, 360],
-    prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(12), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
-});
-
-doc.moveDown(1);
-
-
-doc.fill(titleColor).stroke();
-doc.fontSize(16).font('fonts/rbold.ttf')
-    .text(`Token (${symbol}) Holders Info`)
-doc.moveDown(1);
-
-const tokenInfo = {
-    headers: [
-        { label: "  Parameter", headerColor: titleColor },
-        { label: `Result`, headerColor: titleColor },
-    ],
-    rows: [
-        [`  ${symbol} Percentage Locked`, `${roundToNearestHundredth(top10Token.percentageLocked)}%`],
-        [`  ${symbol} Amount Locked`, `${parseNumber(top10Token.totalLocked)} ${symbol}`],
-        ['  Top 10 Percentage Own', `${roundToNearestHundredth(top10Token.totalPercentages)}%`],
-        ['  Top 10 Amount Owned', `${parseNumber(top10Token.totalAmount)} ${symbol}`],
-        // ['  Top 10 Aprox Value',  `$${crw[1][2][0]} USD`],
-    ],
-};
-
-// **********  token holders table  ***********
-doc.table(tokenInfo, {
-    columnSpacing: 10,
-    width: 490,
-    columnsSize: [170, 320],
-    prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
-});
-// Move down a bit to provide space between lists
-doc.moveDown(0.5);
-
-doc.fill(titleColor).stroke();
-doc.fontSize(16).font('fonts/rbold.ttf')
-    .text(`LP (${symbol}/${baseToken}) Holders Info`)
-doc.moveDown(1.5);
-
-
-const lpInfo = {
-    headers: [
-        { label: "  Parameter", headerColor: titleColor },
-        { label: `Result`, headerColor: titleColor },
-    ],
-    rows: [
-        [`  ${symbol}/${baseToken} % Locked`, `${roundToNearestHundredth(top10LP.percentageLocked * 100)}%`],
-        [`  ${symbol}/${baseToken} Amount Locked`, `${parseNumber(top10LP.totalLocked)} ${symbol}/${baseToken}`],
-        ['  Top 10 Percentage Owned', `${roundToNearestHundredth(top10LP.totalPercentages * 100)}%`],
-        ['  Top 10 Amount Owned', `${parseNumber(top10LP.totalAmount)} ${symbol}/${baseToken}`],
-        // ['  Locked Tokens Percentage',  `${crw[2][2][0]}%`],
-        // ['  Locked Tokens Amount',  `${crw[2][2][1]} ${symbol}/${baseToken}`],
-    ],
-};
-
-// 0x71b8214D3b69e101feE63d53364bAACB950e6C88
-
-// **********  lp holders table  ***********
-doc.table(lpInfo, {
-    columnSpacing: 10,
-    width: 490,
-    columnsSize: [190, 320],
-    prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
-});
-// Move down a bit to provide space between lists
-doc.moveUp(0.5);
-
-doc.font("fonts/Roboto-Regular.ttf").fontSize(6).fillColor(textColor)
-    .text(`* All the data diplayed above was taken on-chain on ${docTimeWithSlashes}`)
-    .text(`* Data is delivered as is, we do not take responsibility for any errors or omissions in the data`)
-
-
-doc.rect(0, 795, 190, 50);
-doc.fill(getGradient(doc));
-
-doc.addPage({
-    size: 'A4',
-    margin: 60
-})
-
-doc.rect(0, 0, 595.28, 841.89);
-doc.fill(backgroundMain);
-doc.image('background/page.png', 0, 0, { width: 600 })
-
-doc.fill(titleColor).stroke();
-doc.fontSize(20).font('fonts/rbold.ttf')
-//doc.moveDown(2).text(`Liquidity Ownership`, { continued: false, align: "center" })
-//doc.font("fonts/Roboto-Regular.ttf").fontSize(14).fillColor(textColor)
-//doc.moveDown().text(`The token does not have liquidity at the moment of the audit, block ${crw[3]}`, { align: "center" })
-
-//doc.moveDown().text("Most of the liquidity is currently locked, the lock can be seen here:", { align: "center" })
-doc.moveDown().text(liquidityLock, { align: "center", underline: true, link: liquidityLock })
-doc.image('logos/simpledark.png', 125, 600, { width: 350 })
+// //doc.moveDown().text("Most of the liquidity is currently locked, the lock can be seen here:", { align: "center" })
+// doc.moveDown().text(liquidityLock, { align: "center", underline: true, link: liquidityLock })
+// doc.image('logos/simpledark.png', 125, 600, { width: 350 })
 
 
 

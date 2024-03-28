@@ -25,12 +25,12 @@ interface LockedDetail {
     opt_time: string;
 }
 
-interface Chain {
+export interface Chain {
     id: string;
     name: string;
     shortName: string;
     currency: string;
-    decimals: string;
+    decimals: number;
 }
 
 export interface TokenInfo {
@@ -88,11 +88,11 @@ export interface TokenInfo {
 
         
     // isHoneypot
-    token_decimals?: string;
-    is_openSource?: string;
+    token_decimals?: number;
+    is_openSource?: boolean;
     pairCreatedAtTimestamp?: string;
     pairCreationTxHash?: string;
-    transfer_tax?: string;
+    transfer_tax?: number;
     buy_gas?: string;
     sell_gas?: string;
     chain: Chain;

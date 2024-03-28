@@ -1,5 +1,5 @@
 // ContractAnalyzer.test.ts
-import { runSlither, loadSlitherOutput, extractDetectorResults, populateDetectorResults } from './ContractAnalyzer';
+import { runSlither, loadSlitherOutput, extractDetectorResults, populateDetectorResults, runSlitherGetModifiers, extractModifiers } from './ContractAnalyzer';
 
 import fs from 'fs';
 
@@ -10,6 +10,7 @@ import type { Detector } from './types/SlitherTypes';
 
 import { test, expect, mock, describe } from "bun:test";
 import logger from './logger';
+import { Result } from 'ethers';
 
 describe("ContractAnalyzer", () => {
     test("Slither_run_save_return_json", async () => {
@@ -46,5 +47,13 @@ describe("ContractAnalyzer", () => {
         
         fs.writeFileSync(config.jsonCleanDetectorPath, JSON.stringify(cleanedWithMetadata, null, 2));
     });
+
+    test("Extract and parseModifiers", async () => {
+        const modifierPrinterData = await runSlitherGetModifiers(config.testContractPath, config.jsonSlitherModifiersPath)
+        console.log("modifierPrinterData", modifierPrinterData ? true : false)
+
+        const cleanedMod = extractModifiers(modifierPrinterData)
+        console.log(cleanedMod)
+    })
 
 });

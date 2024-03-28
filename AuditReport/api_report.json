@@ -5,23 +5,23 @@
   "cannot_buy": "0",
   "cannot_sell_all": "0",
   "creator_address": "0xe4f683bf74a2211be97f9e9ebac623ea95cc1a4b",
-  "creator_balance": "15566142924833.616822472",
-  "creator_percent": "0.037062",
+  "creator_balance": "15566488110774.236177171",
+  "creator_percent": "0.037063",
   "dex": [
     {
       "liquidity_type": "UniV2",
       "name": "PancakeV2",
-      "liquidity": "6012.71995268",
+      "liquidity": "11304.14343812",
       "pair": "0x8b29a93605ecc453ed1d0bab744025347765d98b",
       "token0": "0x3a5efAEF111Ea4014812181C2dd07ce4887593dE",
       "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-      "reserve0": 133729547641074.55,
-      "reserve1": 20.210144037787046
+      "reserve0": 139208833747628.1,
+      "reserve1": 19.39626533651346
     }
   ],
   "external_call": "0",
   "hidden_owner": "0",
-  "holder_count": "4610",
+  "holder_count": "4609",
   "holders": [
     {
       "address": "0x000000000000000000000000000000000000dead",
@@ -35,8 +35,8 @@
       "address": "0x8b29a93605ecc453ed1d0bab744025347765d98b",
       "tag": "PancakeV2",
       "is_contract": 1,
-      "balance": "133729547641074.548392645",
-      "percent": "0.318403684859701305",
+      "balance": "139208833747628.098099935",
+      "percent": "0.331449604161019281",
       "is_locked": 0
     },
     {
@@ -45,14 +45,6 @@
       "is_contract": 0,
       "balance": "15561709236690.637759806",
       "percent": "0.037051688658787232",
-      "is_locked": 0
-    },
-    {
-      "address": "0xdba5e8c3818d540437863813089015f59405a970",
-      "tag": "",
-      "is_contract": 0,
-      "balance": "5500569350386.423129811",
-      "percent": "0.013096593691396245",
       "is_locked": 0
     },
     {
@@ -101,6 +93,14 @@
       "is_contract": 0,
       "balance": "133545961995.314400651",
       "percent": "0.000317966576179320",
+      "is_locked": 0
+    },
+    {
+      "address": "0x35e481ed4f72679cd8c743f29aaf80012d09c0dc",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "90106035543.256294013",
+      "percent": "0.000214538179864895",
       "is_locked": 0
     }
   ],
@@ -155,12 +155,12 @@
   ],
   "lp_total_supply": "1605.623788647753850913",
   "owner_address": "0x000000000000000000000000000000000000dead",
-  "owner_balance": "255961309746511.605909488",
+  "owner_balance": "255966985799076.050419108",
   "owner_change_balance": "0",
-  "owner_percent": "0.609432",
+  "owner_percent": "0.609445",
   "personal_slippage_modifiable": "0",
   "selfdestruct": "0",
-  "sell_tax": "0.084",
+  "sell_tax": "0.0834",
   "slippage_modifiable": "0",
   "token_name": "SimpsonsINU",
   "token_symbol": "SIMPSON",
@@ -187,13 +187,13 @@
   "url": "https://hub.docker.commmmmm",
   "telegram": "https://t.me/auditreport",
   "description": "This token is the best in the market because it is the most secure and the most reliable.",
-  "auditPassed": true,
-  "maxTax": true,
-  "maxWallet": true,
-  "enableTrade": true,
-  "modifyingTaxes": true,
-  "canBlacklist": true,
-  "pauseTrade": true,
+  "auditPassed": false,
+  "maxTax": false,
+  "maxWallet": false,
+  "enableTrade": false,
+  "modifyingTaxes": false,
+  "canBlacklist": false,
+  "pauseTrade": false,
   "type": "ERC-20",
   "blockScanData": {
     "ContractName": "SimpsonsINU",
@@ -207,5 +207,47 @@
     "Proxy": "0",
     "Implementation": "",
     "SwarmSource": "ipfs://a49b307062ab062d70e9c9966940813f4f92d62c81ab70c05476d7214e11cf0b"
-  }
+  },
+  "privilegeFunctions": [
+    [
+      "transferOwnership",
+      "onlyOwner"
+    ],
+    [
+      "transfer",
+      "lockTheSwap"
+    ],
+    [
+      "transferFrom",
+      "lockTheSwap"
+    ],
+    [
+      "_transfer",
+      "lockTheSwap"
+    ],
+    [
+      "swapTokensForEth",
+      "lockTheSwap"
+    ],
+    [
+      "sendETHToFee",
+      "lockTheSwap"
+    ],
+    [
+      "Manualswapandsend",
+      "lockTheSwap"
+    ],
+    [
+      "withdrawToken",
+      "onlyOwner"
+    ],
+    [
+      "setSwapTokensAtAmount",
+      "onlyOwner"
+    ],
+    [
+      "excludeMultipleAccountsFromFees",
+      "onlyOwner"
+    ]
+  ]
 }

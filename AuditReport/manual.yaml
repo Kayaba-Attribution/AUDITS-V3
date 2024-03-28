@@ -8,13 +8,13 @@ telegram: "https://t.me/auditreport"
 description: "This token is the best in the market because it is the most secure and the most reliable."
 
 # Manual audit fields
-auditPassed: true
-maxTax: true
-maxWallet: true
-enableTrade: true
-modifyingTaxes: true
-canBlacklist: true
-pauseTrade: true
+auditPassed: false
+maxTax: false
+maxWallet: false
+enableTrade: false
+modifyingTaxes: false
+canBlacklist: false
+pauseTrade: false
 
 
 # These will change later

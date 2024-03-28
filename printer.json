@@ -5,10 +5,10 @@
     "printers": [
       {
         "elements": [],
-        "description": "\nCompiled with solc\nTotal number of contracts in source files: 13\nSource lines of code (SLOC) in source files: 696\nNumber of  assembly lines: 0\nNumber of optimization issues: \u001b[92m7\u001b[0m\nNumber of informational issues: \u001b[92m25\u001b[0m\nNumber of low issues: \u001b[92m1\u001b[0m\nNumber of medium issues: \u001b[93m2\u001b[0m\nNumber of high issues: \u001b[91m1\u001b[0m\nERCs: ERC2612, ERC20\n",
-        "markdown": "\nCompiled with solc\nTotal number of contracts in source files: 13\nSource lines of code (SLOC) in source files: 696\nNumber of  assembly lines: 0\nNumber of optimization issues: \u001b[92m7\u001b[0m\nNumber of informational issues: \u001b[92m25\u001b[0m\nNumber of low issues: \u001b[92m1\u001b[0m\nNumber of medium issues: \u001b[93m2\u001b[0m\nNumber of high issues: \u001b[91m1\u001b[0m\nERCs: ERC2612, ERC20\n",
+        "description": "\nCompiled with solc\nTotal number of contracts in source files: 13\nSource lines of code (SLOC) in source files: 696\nNumber of  assembly lines: 0\nNumber of optimization issues: \u001b[92m7\u001b[0m\nNumber of informational issues: \u001b[92m25\u001b[0m\nNumber of low issues: \u001b[92m1\u001b[0m\nNumber of medium issues: \u001b[93m2\u001b[0m\nNumber of high issues: \u001b[91m1\u001b[0m\nERCs: ERC20, ERC2612\n",
+        "markdown": "\nCompiled with solc\nTotal number of contracts in source files: 13\nSource lines of code (SLOC) in source files: 696\nNumber of  assembly lines: 0\nNumber of optimization issues: \u001b[92m7\u001b[0m\nNumber of informational issues: \u001b[92m25\u001b[0m\nNumber of low issues: \u001b[92m1\u001b[0m\nNumber of medium issues: \u001b[93m2\u001b[0m\nNumber of high issues: \u001b[91m1\u001b[0m\nERCs: ERC20, ERC2612\n",
         "first_markdown_element": "",
-        "id": "1acd5d85715475210cf7cf7bff2315ed1f7a3788076ea336471a393ac927bc44",
+        "id": "deeea6cc99a7f44887f9118d12b5a22467788c948ab365730427f992d0915932",
         "additional_fields": {
           "contracts": {
             "elements": [
@@ -652,8 +652,8 @@
           "number_lines_assembly": 0,
           "standard_libraries": [],
           "ercs": [
-            "ERC2612",
-            "ERC20"
+            "ERC20",
+            "ERC2612"
           ],
           "number_findings": {
             "optimization_issues": 7,

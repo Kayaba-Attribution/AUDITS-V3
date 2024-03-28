@@ -1,6 +1,7 @@
 import retry from 'async-retry';
 import axios from 'axios';
 import { GoPlusResponse, TokenInfo } from './types/GoPlusTypes';
+import { HoneypotTokenResponse } from './types/isHoneypotTypes';
 import { ContractDetails } from './types/blockscanTypes';
 import logger from './logger';
 import { getBlockScannerUrl } from './utils/pdfMakerUtils';
@@ -54,7 +55,7 @@ export async function goPlusGetTokenSecurity(chain: number, contractAddress: str
                 let ca = Object.keys(response.data.result)[0]
                 let tokenInfo = response.data.result
                 tokenInfo[ca].contract_address = ca
-
+                logger.info(`[goPlusGetTokenSecurity] succesful fetch`)
                 return tokenInfo[ca];
             },
             {
@@ -64,7 +65,7 @@ export async function goPlusGetTokenSecurity(chain: number, contractAddress: str
 
         return result;
     } catch (error) {
-        console.log('Error getting token security', error);
+        logger.error(`[goPlusGetTokenSecurity] error for ${contractAddress}@${chain}:`, error)
         return null;
     }
 }
@@ -99,6 +100,7 @@ export async function getContractSourceCode(chain: number, contractAddress: stri
                     return data;
                 }
 
+                logger.info(`[getContractSourceCode] succesful fetch`)
                 return data;
             },
             {
@@ -108,12 +110,13 @@ export async function getContractSourceCode(chain: number, contractAddress: stri
 
         return result;
     } catch (error) {
-        console.log('Error getting token security', error);
+        logger.error(`[getContractSourceCode] error for ${contractAddress}@${chain}:`, error)
+
         return null;
     }
 }
 
-export async function isHoneypotTokenSecurity(chain: number, contractAddress: string): Promise<any | null> {
+export async function isHoneypotTokenSecurity(chain: number, contractAddress: string): Promise<HoneypotTokenResponse | null> {
     const url = `
     https://api.honeypot.is/v2/IsHoneypot?address=${contractAddress}&chainID=${chain}`
 
@@ -122,7 +125,7 @@ export async function isHoneypotTokenSecurity(chain: number, contractAddress: st
     try {
         const result = await retry(
             async () => {
-                const response = await axios.get<any>(url);
+                const response = await axios.get<HoneypotTokenResponse>(url);
 
                 if (!response.data) {
                     console.log('Might be hitting the rate limit, try again', contractAddress);
@@ -135,10 +138,10 @@ export async function isHoneypotTokenSecurity(chain: number, contractAddress: st
                 retries: 5,
             }
         );
-
+        logger.info(`[isHoneypotTokenSecurity] succesful fetch`)
         return result;
     } catch (error) {
-        console.log('Error getting token security', error);
+        logger.error(`[isHoneypotTokenSecurity] error for ${contractAddress}@${chain}:`, error)
         return null;
     }
 }
@@ -152,33 +155,44 @@ export async function getApiReport(contractAddress: string, chain: number): Prom
 
     if (res && extraData) {
 
-        res.token_decimals = extraData.token.decimals
-        res.pairCreatedAtTimestamp = extraData.pair.createdAtTimestamp
-        res.transfer_tax = extraData.simulationResult.transferTax
-        res.buy_gas = extraData.simulationResult.buyGas
-        res.sell_gas = extraData.simulationResult.sellGas
-        res.pairCreationTxHash = extraData.pair.creationTxHash
-        res.chain = extraData.chain
+        try {
 
-        res.dex[0].token0 = extraData.pair.pair.token0
-        res.dex[0].token1 = extraData.pair.pair.token1
-        res.chain.decimals = extraData.withToken.decimals
 
-        const tokenDecimals = res.token_decimals ?? '0';
-        if (tokenDecimals === '0') {
-            logger.error('[getApiReport] token_decimals is 0');
-            return null;
+
+            res.token_decimals = extraData.token.decimals
+            res.pairCreatedAtTimestamp = extraData.pair.createdAtTimestamp
+            res.transfer_tax = extraData.simulationResult.transferTax
+            res.buy_gas = extraData.simulationResult.buyGas
+            res.sell_gas = extraData.simulationResult.sellGas
+            res.pairCreationTxHash = extraData.pair.creationTxHash
+            res.chain = extraData.chain
+
+            res.dex[0].token0 = extraData.pair.pair.token0
+            res.dex[0].token1 = extraData.pair.pair.token1
+            res.chain.decimals = extraData.withToken.decimals
+
+            const tokenDecimals = res.token_decimals;
+            if (tokenDecimals == 0) {
+                logger.error('[getApiReport] token_decimals is 0');
+                return null;
+            }
+
+            const isToken0ContractAddress = res.contract_address.toLowerCase() === res.dex[0].token0.toLowerCase();
+
+            const reserves0 = BigInt(extraData.pair[isToken0ContractAddress ? 'reserves0' : 'reserves1']);
+            const reserves1 = BigInt(extraData.pair[isToken0ContractAddress ? 'reserves1' : 'reserves0']);
+
+            res.dex[0].reserve0 = Number(reserves0) / 10 ** tokenDecimals;
+            res.dex[0].reserve1 = Number(reserves1) / 10 ** res.chain.decimals;
+            logger.info('[getApiReport] sucessfully retrieved api report');
+        } catch (error) {
+            logger.error('[getApiReport] data merging error');
         }
-
-        const isToken0ContractAddress = res.contract_address.toLowerCase() === res.dex[0].token0.toLowerCase();
-
-        res.dex[0].reserve0 = extraData.pair[isToken0ContractAddress ? 'reserves0' : 'reserves1'] / (10 ** parseInt(tokenDecimals));
-        res.dex[0].reserve1 = extraData.pair[isToken0ContractAddress ? 'reserves1' : 'reserves0'] / (10 ** parseInt(res.chain.decimals));
-
-
+    }
+    else {
+        logger.error('[getApiReport] res && extraData error');
     }
 
-    logger.info('[getApiReport] sucessfully retrieved api report');
     return res;
 }
 

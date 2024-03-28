@@ -1,11 +1,15 @@
 {
   "testContractPath": "contracts/TestContract.sol",
   "jsonSlitherDetectorPath": "./AuditReport/slither_detectors.json",
+  "jsonSlitherModifiersPath": "./AuditReport/slither_modifiers.json",
+  "jsonSlitherCleanModifiersPath": "./AuditReport/slither_modifiers_clean.json",
   "jsonCleanDetectorPath": "./AuditReport/slither_detectors_clean.json",
 
   "jsonApiReportPath": "./AuditReport/api_report.json",
   "jsonGoPlusReportPath": "./AuditReport/goPlus_report.json",
   "jsonHoneypotIsReportPath": "./AuditReport/honeypotIs_report.json",
+
+
 
   "manualReportPath": "./AuditReport/manual.yaml",
   
