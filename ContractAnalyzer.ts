@@ -150,6 +150,77 @@ export const changeSolcVersion = async (solcVersion: string): Promise<void> => {
     });
 }
 
+export const runSurya = async (cmd:string, contractPath: string, outputPath: string): Promise<any | null> => {
+    try {
+        await unlink(outputPath); // Delete the file if it exists
+    } catch (err: any) {
+        // Only log error if it's not about the file's non-existence
+        if (err.code !== 'ENOENT') {
+            logger.error("[runSurya] unlink outputPath error:", outputPath, err);
+        }
+    }
+
+    const allowList = ['inheritance', 'graph']
+
+    if(!allowList.includes(cmd)){
+        throw new Error(`Surya command not allowed:${cmd}`);
+
+    }
+
+    return new Promise((resolve, reject) => {
+        // execute slither and save to json
+        exec(`surya ${cmd} ${contractPath} | dot -Tpng > ${outputPath}`, async (error, stdout, stderr) => {
+            if (error) {
+                logger.error(`[runSurya error] ${cmd} error:`, error);
+                reject(error.message);
+                return;
+            }
+
+            if (fs.existsSync(outputPath)) {
+                logger.info(`[runSurya] success ${cmd} saved to ${outputPath}`);
+                resolve(true)
+              } else {
+                logger.error(`[runSurya error] ${cmd} error:`, error);
+              }
+
+
+        });
+    });
+
+}
+
+export const runSlitherInheritance = async (contractPath: string, outputPath: string, contractName:string): Promise<any | null> => {
+    try {
+        await unlink(outputPath); // Delete the file if it exists
+    } catch (err: any) {
+        // Only log error if it's not about the file's non-existence
+        if (err.code !== 'ENOENT') {
+            logger.error("[runSurya] unlink outputPath error:", outputPath, err);
+        }
+    }
+
+    return new Promise((resolve, reject) => {
+        // execute slither and save to json
+        exec(`slither ${contractPath} --print inheritance-graph | dot contracts/${contractName}.sol.inheritance-graph.dot -Tpng -o ${outputPath}`, async (error, stdout, stderr) => {
+            if (error) {
+                logger.error(`[runSlitherInheritance error] error:`, error);
+                reject(error.message);
+                return;
+            }
+
+            if (fs.existsSync(outputPath)) {
+                logger.info(`[runSlitherInheritance] successsaved to ${outputPath}`);
+                resolve(true)
+              } else {
+                logger.error(`[runSlitherInheritance]  error:`, error);
+              }
+
+
+        });
+    });
+
+}
+
 export const runSlitherGetModifiers = async (contractPath: string, jsonOutputPath: string): Promise<any | null> => {
     try {
         await unlink(jsonOutputPath); // Delete the file if it exists

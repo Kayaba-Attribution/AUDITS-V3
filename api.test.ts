@@ -1,11 +1,30 @@
 import fs from 'fs';
 import config from './ConfigurationManager';
 
-import { goPlusGetTokenSecurity, isHoneypotTokenSecurity } from './api';
+import { goPlusGetTokenSecurity, isHoneypotTokenSecurity, getContractSourceCode } from './api';
 import { describe, expect, test } from 'bun:test';
 
 
 describe("API", () => {
+
+    test("getContractSourceCode", async () => {
+        const blockScanData = await getContractSourceCode(1, "0x57eF27273ECA2Df2e0a6a0534e12bbAa26dd315d");
+
+
+        expect(blockScanData).toBeDefined();
+        expect(blockScanData?.SourceCode).toBeDefined();
+
+        const code: any = blockScanData?.SourceCode
+        const parsedSourceCode = JSON.parse(code)
+
+        console.log(typeof code)
+
+        if (blockScanData) {
+            // console.log(res);
+            fs.writeFileSync(config.auditContractPath, code);
+        }
+    }, 10000);
+
     test("goPlusGetTokenSecurity", async () => {
         let res = await goPlusGetTokenSecurity(56, '0x8c420a81786935DD4A90ff0B40083089Bce1535C')
 

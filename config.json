@@ -9,6 +9,10 @@
   "jsonGoPlusReportPath": "./AuditReport/goPlus_report.json",
   "jsonHoneypotIsReportPath": "./AuditReport/honeypotIs_report.json",
 
+  "suryaInheritancePath": "./AuditReport/inheritance.png",
+  "slitherInheritancePath": "./AuditReport/slither_inheritance.png",
+  "suryaGraphPath": "./AuditReport/graph.png",
+
 
 
   "manualReportPath": "./AuditReport/manual.yaml",
@@ -18,5 +22,7 @@
 
   "auditContractPath": "contracts/AuditContract.sol",
 
-  "bscscanApiKey": "92MM9Q3NG1AHGE21YEHMX6F56VWM6GM3PW"
+  "bscscanApiKey": "92MM9Q3NG1AHGE21YEHMX6F56VWM6GM3PW",
+  "etherscanApiKey": "CYZ7EYXTR5H5Z7R5J17UAEIEFCPUJVN4KC"
 }
+

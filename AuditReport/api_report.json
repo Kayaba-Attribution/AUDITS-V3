@@ -1,112 +1,112 @@
 {
-  "anti_whale_modifiable": "0",
-  "buy_tax": "0.1",
+  "anti_whale_modifiable": "1",
+  "buy_tax": "0",
   "can_take_back_ownership": "0",
   "cannot_buy": "0",
   "cannot_sell_all": "0",
-  "creator_address": "0xe4f683bf74a2211be97f9e9ebac623ea95cc1a4b",
-  "creator_balance": "15566488110774.236177171",
-  "creator_percent": "0.037063",
+  "creator_address": "0x184f0e205bad3f348a4fcf32f43a1aa5d17e26f6",
+  "creator_balance": "0",
+  "creator_percent": "0.000000",
   "dex": [
     {
       "liquidity_type": "UniV2",
-      "name": "PancakeV2",
-      "liquidity": "11304.14343812",
-      "pair": "0x8b29a93605ecc453ed1d0bab744025347765d98b",
-      "token0": "0x3a5efAEF111Ea4014812181C2dd07ce4887593dE",
-      "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-      "reserve0": 139208833747628.1,
-      "reserve1": 19.39626533651346
+      "name": "UniswapV2",
+      "liquidity": "9695.94108048",
+      "pair": "0x554d1fd28336504d2d7d358ec03c6f53d178af1f",
+      "token0": "0x57eF27273ECA2Df2e0a6a0534e12bbAa26dd315d",
+      "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "reserve0": 224763372051362.78,
+      "reserve1": 2.771591325140916
     }
   ],
   "external_call": "0",
   "hidden_owner": "0",
-  "holder_count": "4609",
+  "holder_count": "210",
   "holders": [
+    {
+      "address": "0x554d1fd28336504d2d7d358ec03c6f53d178af1f",
+      "tag": "UniswapV2",
+      "is_contract": 1,
+      "balance": "224763372051362.780533815266313936",
+      "percent": "0.534273151373607122",
+      "is_locked": 0
+    },
     {
       "address": "0x000000000000000000000000000000000000dead",
       "tag": "",
       "is_contract": 0,
-      "balance": "255692656832442.975049271",
-      "percent": "0.608792040077245178",
+      "balance": "27050610251041.242370151836647382",
+      "percent": "0.064300578219214248",
       "is_locked": 1
     },
     {
-      "address": "0x8b29a93605ecc453ed1d0bab744025347765d98b",
-      "tag": "PancakeV2",
-      "is_contract": 1,
-      "balance": "139208833747628.098099935",
-      "percent": "0.331449604161019281",
-      "is_locked": 0
-    },
-    {
-      "address": "0xe4f683bf74a2211be97f9e9ebac623ea95cc1a4b",
+      "address": "0x4cfd952cf0d53fab4a32849901428ca8bf5795a3",
       "tag": "",
       "is_contract": 0,
-      "balance": "15561709236690.637759806",
-      "percent": "0.037051688658787232",
+      "balance": "14974125869136.225868336847785391",
+      "percent": "0.035594204447779186",
       "is_locked": 0
     },
     {
-      "address": "0x4531c4fe41eeb40293db97a5115973be3b2c40f8",
+      "address": "0x33b279a7b0a21258ac210d126bcbc168facefa00",
       "tag": "",
       "is_contract": 0,
-      "balance": "2985216161339.989979644",
-      "percent": "0.007107657526999976",
+      "balance": "13484009534947.307811733592501231",
+      "percent": "0.032052127540343977",
       "is_locked": 0
     },
     {
-      "address": "0xb24cf9ba9c09a9f495b6b876e7c1b88209cd8a8d",
-      "tag": "",
-      "is_contract": 1,
-      "balance": "1970052366730.850549411",
-      "percent": "0.004690600873168691",
-      "is_locked": 0
-    },
-    {
-      "address": "0xda129631d9ab7e25dd6511ccc72de04e9d1ca9ee",
+      "address": "0xb028678d7c4d53126a57027f7ec8585a3dc9784b",
       "tag": "",
       "is_contract": 0,
-      "balance": "884750833320.852552206",
-      "percent": "0.002106549603144887",
+      "balance": "11428162026729.3257103594750496",
+      "percent": "0.027165280911667322",
       "is_locked": 0
     },
     {
-      "address": "0xd9bd8dbac1e384d1a4906e441c7c60bee61f5e90",
+      "address": "0x8ba983344a53a635452e14352663425f81387480",
       "tag": "",
       "is_contract": 0,
-      "balance": "201059838437.988777878",
-      "percent": "0.000478713901042830",
+      "balance": "8489060542746.389343693804640836",
+      "percent": "0.020178897864808741",
       "is_locked": 0
     },
     {
-      "address": "0x0331b894502b25931e1ad3e019229f4f65f4813f",
+      "address": "0xf01b0611b6bdfb87e6790f8e4193027f7127f55d",
       "tag": "",
       "is_contract": 0,
-      "balance": "200881964433.03098577",
-      "percent": "0.000478290391507216",
+      "balance": "7665627753106.589948155513278215",
+      "percent": "0.018221559231516294",
       "is_locked": 0
     },
     {
-      "address": "0xa2cb2ce8329f27b1fb19d4ed163be7d3c8f50da8",
+      "address": "0xbae88c80d8b362bbd09a39b60dd5eb15b3ed36b0",
       "tag": "",
       "is_contract": 0,
-      "balance": "133545961995.314400651",
-      "percent": "0.000317966576179320",
+      "balance": "6956510931177.914632853550625809",
+      "percent": "0.016535955052836802",
       "is_locked": 0
     },
     {
-      "address": "0x35e481ed4f72679cd8c743f29aaf80012d09c0dc",
+      "address": "0x113b69e073212c1bfc68954497de25b237da5492",
       "tag": "",
       "is_contract": 0,
-      "balance": "90106035543.256294013",
-      "percent": "0.000214538179864895",
+      "balance": "6737765634077.531502697437643204",
+      "percent": "0.016015987149866960",
+      "is_locked": 0
+    },
+    {
+      "address": "0x275121b5734bdae3bd97da0fe37f47450656cb13",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "5592548041243.280196633842490024",
+      "percent": "0.013293750840864485",
       "is_locked": 0
     }
   ],
   "honeypot_with_same_creator": "0",
-  "is_anti_whale": "0",
-  "is_blacklisted": "0",
+  "is_anti_whale": "1",
+  "is_blacklisted": "1",
   "is_honeypot": "0",
   "is_in_dex": "1",
   "is_mintable": "0",
@@ -116,29 +116,22 @@
   "lp_holder_count": "3",
   "lp_holders": [
     {
-      "address": "0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe",
-      "tag": "PinkLock02",
+      "address": "0x000000000000000000000000000000000000dead",
+      "tag": "",
       "value": null,
-      "is_contract": 1,
-      "balance": "1605.623771442756652244",
-      "percent": "0.999999989284540176",
+      "is_contract": 0,
+      "balance": "19776506.744114340680143611",
+      "percent": "0.835779607132073747",
       "NFT_list": null,
-      "is_locked": 1,
-      "locked_detail": [
-        {
-          "amount": "1605.623771442756652244",
-          "end_time": "2024-12-07T14:00:19+00:00",
-          "opt_time": "2023-06-06T14:00:19+00:00"
-        }
-      ]
+      "is_locked": 1
     },
     {
-      "address": "0x996730db3c8ef2aa6bfbd3fa9c99a8201f97a5db",
+      "address": "0x57ef27273eca2df2e0a6a0534e12bbaa26dd315d",
       "tag": "",
       "value": null,
       "is_contract": 1,
-      "balance": "0.000017204997197669",
-      "percent": "0.000000010715459822",
+      "balance": "3885839.854621426126450185",
+      "percent": "0.164220392867926252",
       "NFT_list": null,
       "is_locked": 0
     },
@@ -153,36 +146,36 @@
       "is_locked": 1
     }
   ],
-  "lp_total_supply": "1605.623788647753850913",
-  "owner_address": "0x000000000000000000000000000000000000dead",
-  "owner_balance": "255966985799076.050419108",
+  "lp_total_supply": "23662346.598735766806594796",
+  "owner_address": "0x0000000000000000000000000000000000000000",
+  "owner_balance": "0",
   "owner_change_balance": "0",
-  "owner_percent": "0.609445",
+  "owner_percent": "0.000000",
   "personal_slippage_modifiable": "0",
   "selfdestruct": "0",
-  "sell_tax": "0.0834",
-  "slippage_modifiable": "0",
-  "token_name": "SimpsonsINU",
-  "token_symbol": "SIMPSON",
-  "total_supply": "420000000000000",
-  "trading_cooldown": "0",
+  "sell_tax": "0",
+  "slippage_modifiable": "1",
+  "token_name": "President PEPE",
+  "token_symbol": "PREPE",
+  "total_supply": "420690000000000",
+  "trading_cooldown": "1",
   "transfer_pausable": "0",
-  "contract_address": "0x3a5efaef111ea4014812181c2dd07ce4887593de",
-  "token_decimals": 9,
-  "pairCreatedAtTimestamp": "1685723126",
+  "contract_address": "0x57ef27273eca2df2e0a6a0534e12bbaa26dd315d",
+  "token_decimals": 18,
+  "pairCreatedAtTimestamp": "1683138611",
   "transfer_tax": 0,
-  "buy_gas": "201639",
-  "sell_gas": "125192",
-  "pairCreationTxHash": "0xc045df9004460a765a263c640eb08584c0503e6f981af7a932595a2dfadd796a",
+  "buy_gas": "176027",
+  "sell_gas": "107939",
+  "pairCreationTxHash": "0x7b48d70428cc0337a840b724e419ebc57992b6693d568054123848cc3f376470",
   "chain": {
-    "id": "56",
-    "name": "Binance Smart Chain",
-    "shortName": "bsc",
-    "currency": "BNB",
+    "id": "1",
+    "name": "Ethereum",
+    "shortName": "eth",
+    "currency": "ETH",
     "decimals": 18
   },
-  "token_address": "0x3a5efAEF111Ea4014812181C2dd07ce4887593dE",
-  "network": 56,
+  "token_address": "0x57eF27273ECA2Df2e0a6a0534e12bbAa26dd315d",
+  "network": 1,
   "imageName": "aRK.png",
   "url": "https://hub.docker.commmmmm",
   "telegram": "https://t.me/auditreport",
@@ -195,58 +188,107 @@
   "canBlacklist": false,
   "pauseTrade": false,
   "type": "ERC-20",
+  "manualContractOverride": true,
   "blockScanData": {
-    "ContractName": "SimpsonsINU",
-    "CompilerVersion": "v0.8.16+commit.07a7930e",
+    "ContractName": "Prepe",
+    "CompilerVersion": "v0.8.19+commit.7dd6d404",
     "OptimizationUsed": "1",
     "Runs": "200",
     "ConstructorArguments": "",
     "EVMVersion": "Default",
     "Library": "",
-    "LicenseType": "Unlicense",
+    "LicenseType": "",
     "Proxy": "0",
     "Implementation": "",
-    "SwarmSource": "ipfs://a49b307062ab062d70e9c9966940813f4f92d62c81ab70c05476d7214e11cf0b"
+    "SwarmSource": ""
   },
   "privilegeFunctions": [
+    [
+      "renounceOwnership",
+      "onlyOwner"
+    ],
     [
       "transferOwnership",
       "onlyOwner"
     ],
     [
-      "transfer",
-      "lockTheSwap"
-    ],
-    [
-      "transferFrom",
-      "lockTheSwap"
-    ],
-    [
-      "_transfer",
-      "lockTheSwap"
-    ],
-    [
-      "swapTokensForEth",
-      "lockTheSwap"
-    ],
-    [
-      "sendETHToFee",
-      "lockTheSwap"
-    ],
-    [
-      "Manualswapandsend",
-      "lockTheSwap"
-    ],
-    [
-      "withdrawToken",
+      "constructor",
       "onlyOwner"
     ],
     [
-      "setSwapTokensAtAmount",
+      "enableTrading",
       "onlyOwner"
     ],
     [
-      "excludeMultipleAccountsFromFees",
+      "removeLimits",
+      "onlyOwner"
+    ],
+    [
+      "disableTransferDelay",
+      "onlyOwner"
+    ],
+    [
+      "updateSwapTokensAtAmount",
+      "onlyOwner"
+    ],
+    [
+      "updateMaxTxnAmount",
+      "onlyOwner"
+    ],
+    [
+      "updateMaxWalletAmount",
+      "onlyOwner"
+    ],
+    [
+      "excludeFromMaxTransaction",
+      "onlyOwner"
+    ],
+    [
+      "updateBuyFees",
+      "onlyOwner"
+    ],
+    [
+      "updateSellFees",
+      "onlyOwner"
+    ],
+    [
+      "updateSwapEnabled",
+      "onlyOwner"
+    ],
+    [
+      "excludeFromFees",
+      "onlyOwner"
+    ],
+    [
+      "ApproveAccount",
+      "onlyOwner"
+    ],
+    [
+      "setAutomatedMarketMakerPair",
+      "onlyOwner"
+    ],
+    [
+      "updateMarketingWallet",
+      "onlyOwner"
+    ],
+    [
+      "updateDevWallet",
+      "onlyOwner"
+    ],
+    [
+      "addToWhitelist",
+      "onlyOwner"
+    ],
+    [
+      "removeFromWhitelist",
+      "onlyOwner"
+    ],
+    [
+      "addToBlacklist",
+      "onlyOwner"
+    ],
+    [
+      "removeFromBlacklist",
       "onlyOwner"
     ]
   ]

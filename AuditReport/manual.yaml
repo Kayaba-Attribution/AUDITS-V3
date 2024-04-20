@@ -1,7 +1,7 @@
 # Comment: Manual audit fields
 ---
-token_address: "0x3a5efAEF111Ea4014812181C2dd07ce4887593dE"
-network: 56
+token_address: "0x57eF27273ECA2Df2e0a6a0534e12bbAa26dd315d"
+network: 1
 imageName: "aRK.png"
 url: "https://hub.docker.commmmmm"
 telegram: "https://t.me/auditreport"
@@ -19,3 +19,6 @@ pauseTrade: false
 
 # These will change later
 type: "ERC-20"
+
+# MANUAL PASTE CONTRACT
+manualContractOverride: true

@@ -1,42 +1,90 @@
 [
   [
+    "renounceOwnership",
+    "onlyOwner"
+  ],
+  [
     "transferOwnership",
     "onlyOwner"
   ],
   [
-    "transfer",
-    "lockTheSwap"
-  ],
-  [
-    "transferFrom",
-    "lockTheSwap"
-  ],
-  [
-    "_transfer",
-    "lockTheSwap"
-  ],
-  [
-    "swapTokensForEth",
-    "lockTheSwap"
-  ],
-  [
-    "sendETHToFee",
-    "lockTheSwap"
-  ],
-  [
-    "Manualswapandsend",
-    "lockTheSwap"
-  ],
-  [
-    "withdrawToken",
+    "constructor",
     "onlyOwner"
   ],
   [
-    "setSwapTokensAtAmount",
+    "enableTrading",
     "onlyOwner"
   ],
   [
-    "excludeMultipleAccountsFromFees",
+    "removeLimits",
+    "onlyOwner"
+  ],
+  [
+    "disableTransferDelay",
+    "onlyOwner"
+  ],
+  [
+    "updateSwapTokensAtAmount",
+    "onlyOwner"
+  ],
+  [
+    "updateMaxTxnAmount",
+    "onlyOwner"
+  ],
+  [
+    "updateMaxWalletAmount",
+    "onlyOwner"
+  ],
+  [
+    "excludeFromMaxTransaction",
+    "onlyOwner"
+  ],
+  [
+    "updateBuyFees",
+    "onlyOwner"
+  ],
+  [
+    "updateSellFees",
+    "onlyOwner"
+  ],
+  [
+    "updateSwapEnabled",
+    "onlyOwner"
+  ],
+  [
+    "excludeFromFees",
+    "onlyOwner"
+  ],
+  [
+    "ApproveAccount",
+    "onlyOwner"
+  ],
+  [
+    "setAutomatedMarketMakerPair",
+    "onlyOwner"
+  ],
+  [
+    "updateMarketingWallet",
+    "onlyOwner"
+  ],
+  [
+    "updateDevWallet",
+    "onlyOwner"
+  ],
+  [
+    "addToWhitelist",
+    "onlyOwner"
+  ],
+  [
+    "removeFromWhitelist",
+    "onlyOwner"
+  ],
+  [
+    "addToBlacklist",
+    "onlyOwner"
+  ],
+  [
+    "removeFromBlacklist",
     "onlyOwner"
   ]
 ]

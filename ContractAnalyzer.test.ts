@@ -1,5 +1,7 @@
 // ContractAnalyzer.test.ts
-import { runSlither, loadSlitherOutput, extractDetectorResults, populateDetectorResults, runSlitherGetModifiers, extractModifiers } from './ContractAnalyzer';
+import { runSlither, loadSlitherOutput, extractDetectorResults, populateDetectorResults, runSlitherGetModifiers, extractModifiers,
+runSurya,
+runSlitherInheritance } from './ContractAnalyzer';
 
 import fs from 'fs';
 
@@ -54,6 +56,14 @@ describe("ContractAnalyzer", () => {
 
         const cleanedMod = extractModifiers(modifierPrinterData)
         console.log(cleanedMod)
+    })
+
+    test("Surya Test Inheritance and graph images", async() => {
+        await runSurya("inheritance", config.testContractPath, config.suryaInheritancePath)
+
+        await runSurya("graph", config.testContractPath, config.suryaGraphPath)
+
+        await runSlitherInheritance(config.testContractPath, config.slitherInheritancePath, "TestContract")
     })
 
 });

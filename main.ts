@@ -10,7 +10,9 @@ import {
     extractDetectorResults,
     populateDetectorResults,
     runSlitherGetModifiers,
-    extractModifiers
+    extractModifiers,
+    runSurya,
+    runSlitherInheritance
 } from './ContractAnalyzer';
 
 import { getApiReport } from './api';
@@ -45,7 +47,7 @@ async function main() {
 
     const apiReport = await getApiReport(token_address, network);
 
-
+    fs.writeFileSync(config.jsonApiReportPath, JSON.stringify(apiReport, null, 2));
     logger.info('[main] saved api report to ' + config.jsonApiReportPath);
 
     if (manual) {
@@ -68,9 +70,21 @@ async function main() {
     const blockScanData = await getContractSourceCode(network, token_address);
 
     if (blockScanData && blockScanData?.SourceCode !== '') {
+        // console.log(Object.keys(blockScanData.SourceCode))
+        // const sourceCodeString = blockScanData?.SourceCode
+        // const cleanedSourceCodeString = sourceCodeString.substring(2, sourceCodeString.length - 2).replace(/\\r\\n/g, "\n").replace(/\\"/g, '"');
+
+        // const sourceCodeObject = JSON.parse(cleanedSourceCodeString);
+        // console.log(blockScanData.SourceCode.language)
+        // console.log(Object.keys(sourceCodeObject))
+
         // save to config.auditContractPath
-        fs.writeFileSync(config.auditContractPath, blockScanData.SourceCode);
-        logger.info(`[main] ${apiReport.token_name} (${apiReport.contract_address}) saved contract to ` + config.auditContractPath);
+        if(!manual.manualContractOverride){
+            fs.writeFileSync(config.auditContractPath, blockScanData?.SourceCode);
+            logger.info(`[main] ${apiReport.token_name} (${apiReport.contract_address}) saved contract to ` + config.auditContractPath);
+        } else{
+            logger.info(`[main] MANUALLY PASTE CONTRACT ON ${config.auditContractPath} !!!!!!!!!`);
+        }
     } else {
         logger.error(`[main] ${apiReport.token_name} (${apiReport.contract_address}) contract not found`);
         return;
@@ -108,6 +122,11 @@ async function main() {
     apiReport.privilegeFunctions = cleanedMod
     fs.writeFileSync(config.jsonSlitherCleanModifiersPath, JSON.stringify(cleanedMod, null, 2));
     logger.info('[main] saved clean modifiers results to ' + config.jsonSlitherCleanModifiersPath);
+
+    // PNGS
+    await runSurya("inheritance", config.auditContractPath, config.suryaInheritancePath)
+    await runSurya("graph", config.auditContractPath, config.suryaGraphPath)
+    await runSlitherInheritance(config.auditContractPath, config.slitherInheritancePath, "AuditContract")
 
     // final save
     fs.writeFileSync(config.jsonApiReportPath, JSON.stringify(apiReport, null, 2));

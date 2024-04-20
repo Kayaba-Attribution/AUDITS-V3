@@ -74,7 +74,7 @@ export async function getContractSourceCode(chain: number, contractAddress: stri
     let [scanner, key] = getBlockScannerUrl(chain);
 
     scanner = scanner.replace('https://', '')
-    const url = `https://api.${scanner}/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${key}.json`;
+    const url = `https://api.${scanner}/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${key}`;
 
     console.log('Getting getContractSourceCode ', url);
 
@@ -93,13 +93,12 @@ export async function getContractSourceCode(chain: number, contractAddress: stri
                     return null;
                 }
 
-                const data: ContractDetails = response.data.result[0];
+                let data: ContractDetails | any = response.data.result[0];
 
                 if (data.SourceCode === '') {
                     logger.error('!! [getContractSourceCode] no source code result found', contractAddress);
                     return data;
                 }
-
                 logger.info(`[getContractSourceCode] succesful fetch`)
                 return data;
             },

@@ -2,6 +2,9 @@
 
 Audits_Temporal
 AuditsReport/*.json
+AuditsReport/*.png
+contracts/*.dot
+AuditsReport/
 background
 bLogoImage
 slither.wiki/

@@ -1,1 +1,9 @@
 Test Notes
+
+Test
+
+cool
+
+surya graph contracts/TestContract.sol -s | dot -Tpng > MyContract.png
+
+surya inheritance contracts/TestContract.sol | dot -Tpng > MyContract.png

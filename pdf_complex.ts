@@ -284,7 +284,7 @@ const is_proxy = info.is_proxy == "1" ? true : false
 
 doc.addPage({
     size: 'A4',
-    margin: 60
+    margin: 60,
 })
 
 doc.rect(0, 0, 595.28, 841.89);
@@ -1394,7 +1394,24 @@ doc.table(OnlyOwnerTable, {
 });
 
 
+doc.rect(0, 795, 190, 50);
+doc.fill(getGradient(doc));
 
+doc.addPage({
+    size: 'A4',
+    margin: 60,
+    layout: 'landscape'
+})
+doc.rect(0, 0, 850, 850);
+doc.fill(backgroundMain);
+
+doc.fill(titleColor).stroke();
+doc.image(config.slitherInheritancePath, 0, 160, { width: 850 })
+doc.image(config.suryaInheritancePath, 400, 70, { width: 450 })
+
+doc.fontSize(20).font('fonts/rbold.ttf')
+    .text(`Inheritance Graph For ${name}`).fillColor(titleColor)
+doc.moveDown(1.5);
 
 // doc.rect(0, 795, 190, 50);
 // doc.fill(getGradient(doc));
