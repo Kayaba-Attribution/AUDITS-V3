@@ -11,24 +11,24 @@
     {
       "liquidity_type": "UniV2",
       "name": "UniswapV2",
-      "liquidity": "9695.94108048",
+      "liquidity": "9775.37669233",
       "pair": "0x554d1fd28336504d2d7d358ec03c6f53d178af1f",
       "token0": "0x57eF27273ECA2Df2e0a6a0534e12bbAa26dd315d",
       "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      "reserve0": 224763372051362.78,
-      "reserve1": 2.771591325140916
+      "reserve0": 198759082563723.8,
+      "reserve1": 3.1363000119762994
     }
   ],
   "external_call": "0",
   "hidden_owner": "0",
-  "holder_count": "210",
+  "holder_count": "215",
   "holders": [
     {
       "address": "0x554d1fd28336504d2d7d358ec03c6f53d178af1f",
       "tag": "UniswapV2",
       "is_contract": 1,
-      "balance": "224763372051362.780533815266313936",
-      "percent": "0.534273151373607122",
+      "balance": "198759082563723.813270522333434652",
+      "percent": "0.472459727028747565",
       "is_locked": 0
     },
     {
@@ -64,6 +64,22 @@
       "is_locked": 0
     },
     {
+      "address": "0xcf46b6567ab61d71a3becf39b188aee0a711466f",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "9574963407369.798615261227427169",
+      "percent": "0.022760140263305043",
+      "is_locked": 0
+    },
+    {
+      "address": "0xbb10aa74e07a3f1e802258a186bd344ce6b02c88",
+      "tag": "",
+      "is_contract": 0,
+      "balance": "9097220488569.493098915529727333",
+      "percent": "0.021624522780597335",
+      "is_locked": 0
+    },
+    {
       "address": "0x8ba983344a53a635452e14352663425f81387480",
       "tag": "",
       "is_contract": 0,
@@ -85,22 +101,6 @@
       "is_contract": 0,
       "balance": "6956510931177.914632853550625809",
       "percent": "0.016535955052836802",
-      "is_locked": 0
-    },
-    {
-      "address": "0x113b69e073212c1bfc68954497de25b237da5492",
-      "tag": "",
-      "is_contract": 0,
-      "balance": "6737765634077.531502697437643204",
-      "percent": "0.016015987149866960",
-      "is_locked": 0
-    },
-    {
-      "address": "0x275121b5734bdae3bd97da0fe37f47450656cb13",
-      "tag": "",
-      "is_contract": 0,
-      "balance": "5592548041243.280196633842490024",
-      "percent": "0.013293750840864485",
       "is_locked": 0
     }
   ],

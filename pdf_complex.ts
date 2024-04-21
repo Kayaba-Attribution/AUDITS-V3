@@ -118,7 +118,8 @@ let fdinds: Record<string, DetectorResult> = {
 let backgroundMain = '#081F32'
 let titleColor = '#DAF7A6'
 let textColor = '#D0D3D4'
-
+const REG_FONT = 'fonts/Roboto-Regular.ttf'
+const BOLD_FONT = 'fonts/Roboto-Bold.ttf'
 
 let name = info.token_name
 let symbol = info.token_symbol
@@ -173,7 +174,7 @@ let Contracts = {
     ],
 };
 
-let doc = new PDFDocument({ size: 'A4', bufferPages: true, lineBreak: false });
+let doc = new PDFDocument({ size: 'A4', bufferPages: true });
 // ! Default saves audit locally
 let destination = "./Audits_Temporal/" + DocName
 // ! --save flag saves the audit pdf and updates JSON on production
@@ -212,7 +213,7 @@ doc.on('pageAdded', () => {
     doc.fill(backgroundMain);
 
 
-    doc.image('background/page.png', 0, 0, { width: 600 })
+    //doc.image('background/page.png', 0, 0, { width: 600 })
 
 
 });
@@ -493,7 +494,7 @@ doc.addPage({
 doc.rect(0, 0, 595.28, 841.89);
 doc.fill(backgroundMain);
 doc.fill(titleColor).stroke();
-doc.image('background/page.png', 0, 0, { width: 600 })
+//doc.image('background/page.png', 0, 0, { width: 600 })
 
 doc.fill(titleColor).stroke();
 doc.fontSize(30).font('fonts/rbold.ttf')
@@ -587,7 +588,7 @@ doc.rect(0, 0, 595.28, 841.89);
 doc.fill(backgroundMain);
 
 
-doc.image('background/page.png', 0, 0, { width: 600 })
+//doc.image('background/page.png', 0, 0, { width: 600 })
 
 doc.fill(titleColor).stroke();
 
@@ -608,8 +609,17 @@ function setFontAndSize(type: string) {
 
 setFontAndSize("text");
 
-doc.text(`This report has been prepared for ${name} ${type} on the ${Platform} network. KISHIELD provides both client-centered and user-centered examination of the smart contracts and their current status when applicable. This report represents the security assessment made to find issues and vulnerabilities on the source code along with the current liquidity and token holder statistics of the protocol.`, {
+const con_options = {
     lineGap: 6,
+    continued: true
+}
+doc.text(`This report has been prepared for `, con_options).fillColor(titleColor).font(BOLD_FONT)
+
+doc.text(`${name} ${type}`, con_options).fillColor(textColor).font(REG_FONT)
+doc.text(`on the ${Platform} network. `,con_options).fillColor(titleColor).font(BOLD_FONT)
+doc.text(`KISHIELD `,con_options).fillColor(textColor).font(REG_FONT)
+doc.text(`provides both client-centered and user-centered examination of the smart contracts and their current status when applicable. This report represents the security assessment made to find issues and vulnerabilities on the source code along with the current liquidity and token holder statistics of the protocol.`, {
+    con_options,
 })
 doc.moveDown()
     .text("A comprehensive examination has been performed, utilizing Cross Referencing, Static Analysis, In-House Security Tools, and line-by-line Manual Review.", {
@@ -654,7 +664,7 @@ doc.addPage({
 
 doc.rect(0, 0, 595.28, 841.89);
 doc.fill(backgroundMain);
-doc.image('background/page.png', 0, 0, { width: 600 })
+//doc.image('background/page.png', 0, 0, { width: 600 })
 doc.fill(titleColor).stroke();
 doc.fontSize(30).font('fonts/rbold.ttf')
     .text("Project Overview", { align: "center" })
@@ -694,9 +704,15 @@ doc.table(table, {
     padding: 15,
     columnSpacing: 10,
     width: 490,
-    columnsSize: [120, 370],
+    columnsSize: [140, 350],
     prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(12), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor), // {Function}
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => {
+        if (indexColumn == 0) {
+            doc.font("fonts/rbold.ttf").fontSize(16).fillColor(titleColor); // {Function}
+        } else {
+            doc.font("fonts/Roboto-Regular.ttf").fontSize(13).fillColor(textColor); // {Function}
+        }
+    }
 });
 doc.moveDown(0.2);
 //--------------------------------
@@ -736,7 +752,7 @@ doc.addPage({
 
 doc.rect(0, 0, 595.28, 841.89);
 doc.fill(backgroundMain);
-doc.image('background/page.png', 0, 0, { width: 600 })
+//doc.image('background/page.png', 0, 0, { width: 600 })
 doc.fill(titleColor).stroke();
 doc.fontSize(30).font('fonts/rbold.ttf')
     .text("Statistics")
@@ -842,6 +858,104 @@ doc.font("fonts/Roboto-Regular.ttf").fontSize(6).fillColor(textColor)
 
 
 
+
+// NOTS TO USERS
+
+doc.rect(0, 795, 190, 50);
+doc.fill(getGradient(doc));
+
+doc.addPage({
+    size: 'A4',
+    margin: 60
+})
+
+doc.rect(0, 0, 595.28, 841.89);
+doc.fill(backgroundMain);
+doc.fontSize(26).font('fonts/rbold.ttf').fill(titleColor).stroke()
+doc.text(`Important Notes To The Users:`, { align: "center" })
+
+doc.font("fonts/Roboto-Regular.ttf").fontSize(14).fillColor(textColor)
+
+let notesArr = fs.readFileSync('notes.txt').toString().split("\n");
+let notesClean = []
+for (let i = 0; i < notesArr.length; i += 2) {
+    try {
+        notesClean.push(notesArr[i])
+    } catch (e) {
+        console.log("index out of bounds")
+    }
+}
+doc.moveDown(1.5);
+doc.list(notesClean, {
+    indent: 10,
+    bulletRadius: 2.2,
+    textIndent: 12,
+    bulletIndent: 30,
+    lineGap: 4,
+    paragraphGap: 10
+});
+
+
+const extra = {
+    headers: [
+        { label: "EMISSION SCHEDULE", property: 'name', width: 130, renderer: null },
+        { label: "Amount (Millions) ", property: 'description', width: 80, renderer: null },
+    ],
+    datas: [
+        { name: "GENESIS_SUPPLY", description: `35` },
+        { name: "MONTH_6_SUPPLY", description: `95` },
+        { name: "YEAR_1_SUPPLY", description: `140` },
+        { name: "YEAR_2_SUPPLY", description: `180` },
+        { name: "YEAR_3_SUPPLY", description: `220` },
+        { name: "YEAR_4_SUPPLY", description: `250` },
+    ],
+}
+
+// doc.moveDown(0.5);
+
+// doc.table(extra, {
+//     x: 200,
+//     padding: 10,
+//     prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(12), // {Function}
+//     prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor), // {Function}
+
+// });
+
+// doc.moveDown(0.5);
+
+
+// Move down a bit to provide space between lists
+//doc.moveDown(0.5);
+
+//doc.image('symbols/check.png', 150, 720, { width: 50 })
+
+doc.fontSize(30).font('fonts/rbold.ttf').fill(titleColor).stroke()
+doc.fontSize(16).text(`Read carefully the notes section and make your own decision before interacting with the audited contract.
+`, { align: "center" })
+//doc.text(`  Audit Passed`, { align: "left" })
+//LOGO
+doc.moveDown(0.5);
+if (info.auditPassed) {
+    doc.fontSize(30).text(`Audit Passed`, { align: "center" })
+    const yLocation = doc.y + 10;
+    doc.image('symbols/check.png', 250, yLocation, { width: 100 })
+}
+else {
+    doc.fontSize(30).text(`Audit Failed`, { align: "center" })
+    const yLocation = doc.y + 10;
+    doc.image('symbols/high.png', 240, yLocation - 10, { width: 100 })
+    doc.image('symbols/err.png', 250, yLocation, { width: 80 })
+}
+
+//doc.fontSize(30).text(`TEST Audit `, { align: "center" })
+
+
+doc.fontSize(30).font('fonts/rbold.ttf').fill('#b20000').stroke()
+//doc.text(`Audit Not Passed`, { align: "center" })
+
+doc.fontSize(30).font('fonts/rbold.ttf').fill(titleColor).stroke()
+
+
 // ? ---------------------------------------------------------------------------------------------------------------------
 // !                                                GENERAL CHECKS
 // ? ---------------------------------------------------------------------------------------------------------------------
@@ -856,7 +970,7 @@ doc.addPage({
 
 doc.rect(0, 0, 595.28, 841.89);
 doc.fill(backgroundMain);
-doc.image('background/page.png', 0, 0, { width: 600 })
+//doc.image('background/page.png', 0, 0, { width: 600 })
 doc.fill(titleColor).stroke();
 doc.fontSize(30).font('fonts/rbold.ttf')
     .text("Smart Contract Vulnerability Checks", { align: "center" })
@@ -955,7 +1069,7 @@ doc.table(registry2, {
 
 });
 doc.moveDown(0.2);
-doc.image('background/page.png', 0, 0, { width: 600 })
+//doc.image('background/page.png', 0, 0, { width: 600 })
 doc.fill(titleColor).stroke();
 doc.fontSize(30).font('fonts/rbold.ttf')
     .text("Contract Ownership", { align: "center" })
@@ -991,103 +1105,6 @@ if (owner != "no" && owner != "none" && owner != "0x0000000000000000000000000000
 }
 doc.moveDown();
 doc.moveDown();
-
-// NOTS TO USERS
-
-doc.rect(0, 795, 190, 50);
-doc.fill(getGradient(doc));
-
-doc.addPage({
-    size: 'A4',
-    margin: 60
-})
-
-doc.rect(0, 0, 595.28, 841.89);
-doc.fill(backgroundMain);
-doc.fontSize(26).font('fonts/rbold.ttf').fill(titleColor).stroke()
-doc.text(`Important Notes To The Users:`, { align: "center" })
-
-doc.font("fonts/Roboto-Regular.ttf").fontSize(14).fillColor(textColor)
-
-let notesArr = fs.readFileSync('notes.txt').toString().split("\n");
-let notesClean = []
-for (let i = 0; i < notesArr.length; i += 2) {
-    try {
-        notesClean.push(notesArr[i])
-    } catch (e) {
-        console.log("index out of bounds")
-    }
-}
-doc.moveDown(1.5);
-doc.list(notesClean, {
-    indent: 10,
-    bulletRadius: 2.2,
-    textIndent: 12,
-    bulletIndent: 30,
-    lineGap: 4,
-    paragraphGap: 10
-});
-
-
-const extra = {
-    headers: [
-        { label: "EMISSION SCHEDULE", property: 'name', width: 130, renderer: null },
-        { label: "Amount (Millions) ", property: 'description', width: 80, renderer: null },
-    ],
-    datas: [
-        { name: "GENESIS_SUPPLY", description: `35` },
-        { name: "MONTH_6_SUPPLY", description: `95` },
-        { name: "YEAR_1_SUPPLY", description: `140` },
-        { name: "YEAR_2_SUPPLY", description: `180` },
-        { name: "YEAR_3_SUPPLY", description: `220` },
-        { name: "YEAR_4_SUPPLY", description: `250` },
-    ],
-}
-
-// doc.moveDown(0.5);
-
-// doc.table(extra, {
-//     x: 200,
-//     padding: 10,
-//     prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(12), // {Function}
-//     prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor), // {Function}
-
-// });
-
-// doc.moveDown(0.5);
-
-
-// Move down a bit to provide space between lists
-//doc.moveDown(0.5);
-
-//doc.image('symbols/check.png', 150, 720, { width: 50 })
-
-doc.fontSize(30).font('fonts/rbold.ttf').fill(titleColor).stroke()
-doc.fontSize(16).text(`Read carefully the notes section and make your own decision before interacting with the audited contract.
-`, { align: "center" })
-//doc.text(`  Audit Passed`, { align: "left" })
-//LOGO
-doc.moveDown(0.5);
-if (info.auditPassed) {
-    doc.fontSize(30).text(`Audit Passed`, { align: "center" })
-    const yLocation = doc.y + 10;
-    doc.image('symbols/check.png', 250, yLocation, { width: 100 })
-}
-else {
-    doc.fontSize(30).text(`Audit Failed`, { align: "center" })
-    const yLocation = doc.y + 10;
-    doc.image('symbols/high.png', 240, yLocation - 10, { width: 100 })
-    doc.image('symbols/err.png', 250, yLocation, { width: 80 })
-}
-
-//doc.fontSize(30).text(`TEST Audit `, { align: "center" })
-
-
-doc.fontSize(30).font('fonts/rbold.ttf').fill('#b20000').stroke()
-//doc.text(`Audit Not Passed`, { align: "center" })
-
-doc.fontSize(30).font('fonts/rbold.ttf').fill(titleColor).stroke()
-
 
 // ---------------------------------------------------------------------------------------------------------------------
 //                                                Findings Summary
@@ -1334,7 +1351,7 @@ for (const name in finds) {
         })
         doc.rect(0, 0, 595.28, 850);
         doc.fill(backgroundMain);
-        doc.image('background/page.png', 0, 0, { width: 600 })
+        //doc.image('background/page.png', 0, 0, { width: 600 })
 
 
 
@@ -1376,6 +1393,7 @@ PrivilegeFunctions.forEach(e => {
 
 // doc.rect(0, 0, 595.28, 841.89);
 // doc.fill(backgroundMain);
+
 doc.fill(titleColor).stroke();
 
 doc.fontSize(20).font('fonts/rbold.ttf')
@@ -1397,21 +1415,35 @@ doc.table(OnlyOwnerTable, {
 doc.rect(0, 795, 190, 50);
 doc.fill(getGradient(doc));
 
+// ---------------------------------------------------------------------------------------------------------------------
+//                                             GRAPHS AND INHERITANCE
+// ---------------------------------------------------------------------------------------------------------------------
+
+
 doc.addPage({
     size: 'A4',
     margin: 60,
-    layout: 'landscape'
 })
 doc.rect(0, 0, 850, 850);
 doc.fill(backgroundMain);
 
 doc.fill(titleColor).stroke();
-doc.image(config.slitherInheritancePath, 0, 160, { width: 850 })
-doc.image(config.suryaInheritancePath, 400, 70, { width: 450 })
 
 doc.fontSize(20).font('fonts/rbold.ttf')
     .text(`Inheritance Graph For ${name}`).fillColor(titleColor)
-doc.moveDown(1.5);
+doc.moveDown(0.5);
+doc.image(config.suryaInheritancePath, 70, doc.y, { width: 450 })
+
+doc.moveDown(1);
+doc.fontSize(20).font('fonts/rbold.ttf')
+    .text(`Full Inheritance Graph For ${name}`).fillColor(titleColor)
+doc.moveDown(0.5);
+
+doc.image(config.slitherInheritancePath, 0, doc.y, { width: page.width })
+
+doc.rect(0, 795, 190, 50);
+doc.fill(getGradient(doc));
+
 
 // doc.rect(0, 795, 190, 50);
 // doc.fill(getGradient(doc));
@@ -1423,7 +1455,7 @@ doc.moveDown(1.5);
 
 // doc.rect(0, 0, 595.28, 841.89);
 // doc.fill(backgroundMain);
-// doc.image('background/page.png', 0, 0, { width: 600 })
+// //doc.image('background/page.png', 0, 0, { width: 600 })
 
 // doc.fill(titleColor).stroke();
 // doc.fontSize(20).font('fonts/rbold.ttf')
@@ -1451,7 +1483,7 @@ doc.addPage({
 
 doc.rect(0, 0, 595.28, 841.89);
 doc.fill(backgroundMain);
-doc.image('background/page.png', 0, 0, { width: 600 })
+//doc.image('background/page.png', 0, 0, { width: 600 })
 doc.fill(titleColor).stroke();
 doc.font("fonts/Roboto-Regular.ttf").fontSize(12)
 
@@ -1483,15 +1515,16 @@ for (let i = 1; i < pages.count; i++) {
 
     //Footer: Add page number
     let oldBottomMargin = doc.page.margins.bottom;
-    doc.image('background/page.png', 0, 0, { width: 600 })
+    ////doc.image('background/page.png', 0, 0, { width: 600 })
     doc.page.margins.bottom = 0 //Dumb: Have to remove bottom margin in order to write into it
+    doc.fillColor(textColor)
     doc
         .text(
             `Page ${i} of ${pages.count - 1}`,
             56,
             doc.page.height - (oldBottomMargin / 2), // Centered vertically in bottom margin
             { align: 'center' }
-        ).fillColor('#00000000')
+        ).fillColor(textColor)
         .text(
             `                                      `,
             20,

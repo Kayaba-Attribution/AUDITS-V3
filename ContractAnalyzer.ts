@@ -65,17 +65,20 @@ export const extractDetectorResults = async (detectors: Detector[]): Promise<Rec
         let findType = "";
         let sourceTest = "";
         let lines: number[] = [];
+        let nonTab_description = description;
         if (elements.length > 0) {
             findType = elements[0].type;
             sourceTest = await extractSourceText(elements[0].source_mapping);
             // remove all empty spaces at the beggining and end of the string
+            sourceTest = sourceTest.replace('\t', '    ')
             sourceTest = sourceTest.trim();
             lines = elements[0].source_mapping.lines;
             // Do something with sourceTest if needed
         }
+        nonTab_description = nonTab_description.replace('\n\t', '\n'),
         detectorResults[counter] = {
             findType,
-            title: description,
+            title: nonTab_description,
             check,
             impact,
             confidence,
@@ -90,6 +93,7 @@ export const extractDetectorResults = async (detectors: Detector[]): Promise<Rec
     return detectorResults;
 };
 
+
 export const populateDetectorResults = async (detectorResults: Record<string, DetectorResult>): Promise<Record<number, DetectorResult>> => {
     // Assuming vulnerabilitiesInfo is the JSON object read from the file
     const vulnerabilitiesInfo = JSON.parse(fs.readFileSync(config.vulnerabilitiesInfoPath, 'utf8'));
@@ -97,11 +101,13 @@ export const populateDetectorResults = async (detectorResults: Record<string, De
     for (const key in detectorResults) {
         const check = detectorResults[key].check;
         if (vulnerabilitiesInfo.hasOwnProperty(check)) {
+            let description = vulnerabilitiesInfo[check].description;
+
             detectorResults[key] = {
                 ...detectorResults[key],
                 name: vulnerabilitiesInfo[check].name,
                 exploit: vulnerabilitiesInfo[check].exploit,
-                description: vulnerabilitiesInfo[check].description,
+                description: description.replace('\n\t', '\n'),
                 recommendation: vulnerabilitiesInfo[check].recommendation,
                 explanation: vulnerabilitiesInfo[check].explanation,
             };
@@ -117,15 +123,25 @@ export const populateDetectorResults = async (detectorResults: Record<string, De
 
         if (resultsNoDuplicates[name]) {
             resultsNoDuplicates[name].numberOfDuplicates = (resultsNoDuplicates[name].numberOfDuplicates ?? 0) + 1;
-            resultsNoDuplicates[name].title += "\n" + detectorResults[find].title;
+            resultsNoDuplicates[name].title += "\n" + detectorResults[find].title.replace('\n\t', '\n');
             resultsNoDuplicates[name].lines = resultsNoDuplicates[name].lines.concat(detectorResults[find].lines);
-            resultsNoDuplicates[name].sourceTest += "\n" + detectorResults[find].sourceTest;
+            resultsNoDuplicates[name].sourceTest += "\n" + detectorResults[find].sourceTest.replace('\n\t', '\n');
         } else {
             resultsNoDuplicates[name] = {
                 numberOfDuplicates: 0,
                 ...detectorResults[find]
             };
         }
+    }
+
+
+    for (const find in resultsNoDuplicates) {
+        resultsNoDuplicates[find].title = resultsNoDuplicates[find].title.replace(/\t/g, '    ');
+        resultsNoDuplicates[find].sourceTest = resultsNoDuplicates[find].sourceTest.replace(/\t/g, '    ');
+        if(resultsNoDuplicates[find].exploit){
+            resultsNoDuplicates[find].exploit = resultsNoDuplicates[find].exploit.replace(/\t/g, '    ');
+        }
+        console.log("DONE")
     }
 
     logger.info(`[populateDetectorResults] Found ${Object.keys(resultsNoDuplicates).length} issues after merging duplicates`);
