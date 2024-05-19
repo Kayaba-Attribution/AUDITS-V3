@@ -211,11 +211,10 @@ doc.on('pageAdded', () => {
 
     doc.rect(0, 0, 595.28, 850);
     doc.fill(backgroundMain);
+    doc.fill(textColor)
 
 
     //doc.image('background/page.png', 0, 0, { width: 600 })
-
-
 });
 
 const page = doc.page;
@@ -616,8 +615,8 @@ const con_options = {
 doc.text(`This report has been prepared for `, con_options).fillColor(titleColor).font(BOLD_FONT)
 
 doc.text(`${name} ${type}`, con_options).fillColor(textColor).font(REG_FONT)
-doc.text(`on the ${Platform} network. `,con_options).fillColor(titleColor).font(BOLD_FONT)
-doc.text(`KISHIELD `,con_options).fillColor(textColor).font(REG_FONT)
+doc.text(`on the ${Platform} network. `, con_options).fillColor(titleColor).font(BOLD_FONT)
+doc.text(`KISHIELD `, con_options).fillColor(textColor).font(REG_FONT)
 doc.text(`provides both client-centered and user-centered examination of the smart contracts and their current status when applicable. This report represents the security assessment made to find issues and vulnerabilities on the source code along with the current liquidity and token holder statistics of the protocol.`, {
     con_options,
 })
@@ -732,7 +731,13 @@ doc.table(Contracts, {
     width: 490,
     columnsSize: [120, 300, 80],
     prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => {
+        if (indexColumn == 0) {
+            doc.font("fonts/rbold.ttf").fontSize(12).fillColor(titleColor); // {Function}
+        } else {
+            doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor); // {Function}
+        }
+    }
 });
 
 //doc.text(`*Token audit will be updated when the token is deployed to mainnet.`, 70,730, { align: "center" })
@@ -782,10 +787,15 @@ doc.table(liqInfo, {
     width: 490,
     columnsSize: [130, 360],
     prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(12), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => {
+        if (indexColumn == 0) {
+            doc.font("fonts/rbold.ttf").fontSize(14).fillColor(titleColor); // {Function}
+        } else {
+            doc.font("fonts/Roboto-Regular.ttf").fontSize(14).fillColor(textColor); // {Function}
+        }
+    }
 });
 
-doc.moveDown(1);
 
 
 doc.fill(titleColor).stroke();
@@ -813,15 +823,21 @@ doc.table(tokenInfo, {
     width: 490,
     columnsSize: [170, 320],
     prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => {
+        if (indexColumn == 0) {
+            doc.font("fonts/rbold.ttf").fontSize(14).fillColor(titleColor); // {Function}
+        } else {
+            doc.font("fonts/Roboto-Regular.ttf").fontSize(14).fillColor(textColor); // {Function}
+        }
+    }
 });
 // Move down a bit to provide space between lists
-doc.moveDown(0.5);
+
 
 doc.fill(titleColor).stroke();
 doc.fontSize(16).font('fonts/rbold.ttf')
     .text(`LP (${symbol}/${baseToken}) Holders Info`)
-doc.moveDown(1.5);
+doc.moveDown(1);
 
 
 const lpInfo = {
@@ -847,15 +863,19 @@ doc.table(lpInfo, {
     width: 490,
     columnsSize: [190, 320],
     prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => {
+        if (indexColumn == 0) {
+            doc.font("fonts/rbold.ttf").fontSize(14).fillColor(titleColor); // {Function}
+        } else {
+            doc.font("fonts/Roboto-Regular.ttf").fontSize(14).fillColor(textColor); // {Function}
+        }
+    }
 });
 // Move down a bit to provide space between lists
 doc.moveUp(0.5);
 
 doc.font("fonts/Roboto-Regular.ttf").fontSize(6).fillColor(textColor)
-    .text(`* All the data diplayed above was taken on-chain on ${docTimeWithSlashes}`)
-    .text(`* Data is delivered as is, we do not take responsibility for any errors or omissions in the data`)
-
+    .text(`* All the data diplayed above was taken on-chain on ${docTimeWithSlashes} **Data is delivered as is, we do not take responsibility for any errors or omissions in the data`)
 
 
 
@@ -876,7 +896,7 @@ doc.text(`Important Notes To The Users:`, { align: "center" })
 
 doc.font("fonts/Roboto-Regular.ttf").fontSize(14).fillColor(textColor)
 
-let notesArr = fs.readFileSync('notes.txt').toString().split("\n");
+let notesArr = fs.readFileSync('AuditReport/notes.txt').toString().split("\n");
 let notesClean = []
 for (let i = 0; i < notesArr.length; i += 2) {
     try {
@@ -943,8 +963,8 @@ if (info.auditPassed) {
 else {
     doc.fontSize(30).text(`Audit Failed`, { align: "center" })
     const yLocation = doc.y + 10;
-    doc.image('symbols/high.png', 240, yLocation - 10, { width: 100 })
-    doc.image('symbols/err.png', 250, yLocation, { width: 80 })
+    doc.image('symbols/high.png', 240, doc.y + 10, { width: 100 })
+    doc.image('symbols/err.png', 250, doc.y + 20, { width: 80 })
 }
 
 //doc.fontSize(30).text(`TEST Audit `, { align: "center" })
@@ -1107,6 +1127,35 @@ doc.moveDown();
 doc.moveDown();
 
 // ---------------------------------------------------------------------------------------------------------------------
+//                                             GRAPHS AND INHERITANCE
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+doc.addPage({
+    size: 'A4',
+    margin: 60,
+})
+doc.rect(0, 0, 850, 850);
+doc.fill(backgroundMain);
+
+doc.fill(titleColor).stroke();
+
+doc.fontSize(20).font('fonts/rbold.ttf')
+    .text(`Inheritance Graph For ${name}`).fillColor(titleColor)
+doc.moveDown(0.5);
+doc.image(config.suryaInheritancePath, 70, doc.y, { width: 450 })
+
+doc.moveDown(1);
+doc.fontSize(20).font('fonts/rbold.ttf')
+    .text(`Full Inheritance Graph For ${name}`).fillColor(titleColor)
+doc.moveDown(0.5);
+
+doc.image(config.slitherInheritancePath, 0, doc.y, { width: page.width })
+
+doc.rect(0, 795, 190, 50);
+doc.fill(getGradient(doc));
+
+// ---------------------------------------------------------------------------------------------------------------------
 //                                                Findings Summary
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -1226,8 +1275,9 @@ doc.table(tableFindings, {
     x: 200,
     columnSpacing: 8,
     prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
-    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
-
+    prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => {
+        doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor); // {Function}
+    }
 });
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -1267,14 +1317,14 @@ class Finding {
         this.detector = detector;
         this.description = description;
         this.headers = [
-            { label: "ID ", property: 'id', width: 30, renderer: null },
+            { label: "  ID", property: 'id', width: 30, renderer: null },
             { label: "Severity", property: 'severity', width: 50, renderer: null },
             { label: "Detector", property: 'detector', width: 100, renderer: null },
             { label: "Description", property: 'description', width: 290, renderer: null },
         ];
         this.datas = [
             {
-                id: `    ${"0" + this.id}`,
+                id: `  ${"0" + this.id}`,
                 detector: `${this.detector}`,
                 description: `${this.description}`,
                 severity: `${this.severity}`
@@ -1304,15 +1354,16 @@ for (const name in finds) {
         doc.table(entrie, {
             columnSpacing: 8,
             prepareHeader: () => doc.font("fonts/Roboto-Regular.ttf").fontSize(11), // {Function}
-            prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor), // {Function}
-
+            prepareRow: (row: any, indexColumn: number, indexRow: number, rectRow: any) => {
+                doc.font("fonts/Roboto-Regular.ttf").fontSize(11).fillColor(textColor) // {Function}
+            }
         });
         doc.moveDown(0.3);
 
         doc.fontSize(15).font('fonts/rbold.ttf').fillColor(titleColor)
             .text("Description")
         doc.moveDown(0.5)
-        doc.font("fonts/Roboto-Regular.ttf").fontSize(12).fillColor(textColor)
+        doc.font("fonts/Roboto-Regular.ttf").fontSize(10).fillColor(textColor)
             .text(finds[name].title)
         doc.moveDown(0.5)
 
@@ -1415,34 +1466,7 @@ doc.table(OnlyOwnerTable, {
 doc.rect(0, 795, 190, 50);
 doc.fill(getGradient(doc));
 
-// ---------------------------------------------------------------------------------------------------------------------
-//                                             GRAPHS AND INHERITANCE
-// ---------------------------------------------------------------------------------------------------------------------
 
-
-doc.addPage({
-    size: 'A4',
-    margin: 60,
-})
-doc.rect(0, 0, 850, 850);
-doc.fill(backgroundMain);
-
-doc.fill(titleColor).stroke();
-
-doc.fontSize(20).font('fonts/rbold.ttf')
-    .text(`Inheritance Graph For ${name}`).fillColor(titleColor)
-doc.moveDown(0.5);
-doc.image(config.suryaInheritancePath, 70, doc.y, { width: 450 })
-
-doc.moveDown(1);
-doc.fontSize(20).font('fonts/rbold.ttf')
-    .text(`Full Inheritance Graph For ${name}`).fillColor(titleColor)
-doc.moveDown(0.5);
-
-doc.image(config.slitherInheritancePath, 0, doc.y, { width: page.width })
-
-doc.rect(0, 795, 190, 50);
-doc.fill(getGradient(doc));
 
 
 // doc.rect(0, 795, 190, 50);
@@ -1512,6 +1536,7 @@ doc.fill(getGradient(doc));
 let pages = doc.bufferedPageRange();
 for (let i = 1; i < pages.count; i++) {
     doc.switchToPage(i);
+
 
     //Footer: Add page number
     let oldBottomMargin = doc.page.margins.bottom;
